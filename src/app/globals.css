@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg-gradient-to-r.dark .bg-gradient-to-r {
+  background-image: none !important;
+}
+
+.bg-gradient-to-r.dark .bg-transparent {
+  background-color: transparent !important;
+}
