@@ -117,7 +117,7 @@ export default function Header() {
           }}
           className="relative rounded-xl w-12 h-12 bg-white shadow-md"
         >
-          {showMenu ? (
+          {showMenuAnimate ? (
             <XMarkIcon className="w-6 h-6 mx-auto" />
           ) : (
             <Bars3Icon className="w-6 h-6 mx-auto" />

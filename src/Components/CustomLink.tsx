@@ -16,6 +16,7 @@ export const CustomLink: React.FC<
       <Link
         href={href}
         onClick={() => {
+          NProgress.configure({ showSpinner: false });
           NProgress.start();
           if (onClick) {
             onClick();
