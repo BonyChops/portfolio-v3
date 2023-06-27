@@ -19,5 +19,5 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BONY_PORTFOLIO_V3 }}"
-          channelId: preview
+          channelId: live
           projectId: bony-portfolio-v3
