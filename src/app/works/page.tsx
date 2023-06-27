@@ -3,7 +3,7 @@ export default function Works() {
     <div className="min-h-screen py-24 px-24">
       <h2 className="text-4xl font-bold mb-10">Works</h2>
       <div>
-        <div className="rounded-xl w-72 h-52 bg-white">
+        <div className="rounded-xl w-72 h-52 bg-white dark:bg-gray-900">
           <div
             className="w-full rounded-t-xl h-32 bg-gray-500 bg-cover bg-no-repeat"
             style={{

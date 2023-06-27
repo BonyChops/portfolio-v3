@@ -60,7 +60,7 @@ export default function Header() {
     <>
       {showMenu && (
         <div
-          className={`transition-all fixed top-0 left-0 w-full h-full bg-white backdrop-blur-md flex flex-col items-center align-middle justify-center gap-4 bg-opacity-70 ${
+          className={`transition-all fixed top-0 left-0 w-full h-full bg-white dark:bg-black backdrop-blur-md flex flex-col items-center align-middle justify-center gap-4 bg-opacity-70 dark:bg-opacity-70 ${
             showMenuAnimate ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -88,13 +88,30 @@ export default function Header() {
           >
             Works
           </HeaderLink>
-          <HeaderLink
+          {/* <HeaderLink
             onClick={() => {
               setShowMenu(false);
             }}
             href="/contacts"
           >
             Contacts
+          </HeaderLink> */}
+          <HeaderLink
+            onClick={() => {
+              setShowMenu(false);
+            }}
+            href="/posts/2023-06-24"
+          >
+            Post Page [Sample]
+          </HeaderLink>
+          <HeaderLink
+            onClick={() => {
+              setShowMenu(false);
+            }}
+            href="https://v2.bonychops.com"
+            className="mt-10"
+          >
+            Previous Version
           </HeaderLink>
         </div>
       )}
@@ -115,7 +132,7 @@ export default function Header() {
           onClick={() => {
             setShowMenu(!showMenu);
           }}
-          className="relative rounded-xl w-12 h-12 bg-white shadow-md"
+          className="relative rounded-xl w-12 h-12 bg-white dark:bg-gray-900 shadow-md"
         >
           {showMenuAnimate ? (
             <XMarkIcon className="w-6 h-6 mx-auto" />
