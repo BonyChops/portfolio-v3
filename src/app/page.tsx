@@ -39,7 +39,7 @@ export default function Home() {
               Bony_Chops
             </div>
             <div className="text-2xl font-bold font-sans mt-2">
-              A student developer
+              Student Developer
             </div>
           </div>
         </div>
