@@ -1,3 +1,4 @@
+/* eslint-disable rulesdir/no-next-link */
 "use client";
 
 import Link from "next/link";
