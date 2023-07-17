@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new": "ts-node scripts/newpage.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -31,6 +32,7 @@
     "yaml": "^2.3.1"
   },
   "devDependencies": {
-    "@types/nprogress": "^0.2.0"
+    "@types/nprogress": "^0.2.0",
+    "ts-node": "^10.9.1"
   }
 }
