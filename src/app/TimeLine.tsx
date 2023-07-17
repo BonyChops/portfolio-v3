@@ -257,7 +257,7 @@ export default function TimeLine() {
             長野工業高等専門学校 卒業
           </p>
         </TimeTreeEvent>
-        <TimeTreeEvent noBottom={!showAll}>
+        <TimeTreeEvent>
           <p className="text-sm opacity-60">2023.04・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <AcademicCapIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -266,7 +266,7 @@ export default function TimeLine() {
           <p>知識情報・図書館学類</p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent noBottom>
+          <TimeTreeEvent>
             <p className="text-sm opacity-60">2023.06・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent size={24} iconData={siGo} className="mr-2" />
@@ -274,32 +274,32 @@ export default function TimeLine() {
             </p>
           </TimeTreeEvent>
         )}
-        {/* <TimeTreeEvent noBottom={!showAll}>
-            <p className="text-sm opacity-60">2023.07 - 2023.09・20 y.o.</p>
+        <TimeTreeEvent noBottom={!showAll}>
+          <p className="text-sm opacity-60">2023.07 - 2023.09・20 y.o.</p>
+          <p className="text-lg flex font-bold">
+            <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
+            ピクシブ株式会社
+          </p>
+          <p>インターン</p>
+        </TimeTreeEvent>
+        {showAll && (
+          <TimeTreeEvent>
+            <p className="text-sm opacity-60">2023・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-              ピクシブ株式会社
+              ？？？
             </p>
-            <p>インターン</p>
           </TimeTreeEvent>
-          {showAll && (
-            <TimeTreeEvent>
-              <p className="text-sm opacity-60">2023・20 y.o.</p>
-              <p className="text-lg flex font-bold">
-                <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-                ？？？
-              </p>
-            </TimeTreeEvent>
-          )}
-          {showAll && (
-            <TimeTreeEvent noBottom>
-              <p className="text-sm opacity-60">2023・20 y.o.</p>
-              <p className="text-lg flex font-bold">
-                <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-                ？？？
-              </p>
-            </TimeTreeEvent>
-          )} */}
+        )}
+        {showAll && (
+          <TimeTreeEvent noBottom>
+            <p className="text-sm opacity-60">2023・20 y.o.</p>
+            <p className="text-lg flex font-bold">
+              <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
+              ？？？
+            </p>
+          </TimeTreeEvent>
+        )}
       </div>
     </div>
   );
