@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 import { remark } from "remark";
+import frontmatter from "remark-frontmatter";
 import html from "remark-html";
+import { parse } from "yaml";
+
 import "../../../styles/posts.css";
 
 export async function generateStaticParams() {
@@ -25,12 +28,29 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
   console.log(targetPath);
   const data = fs.readFileSync(targetPath, "utf-8");
-  const result = await remark().use(html).process(data);
-  console.log(result);
+  const file = await remark()
+    .use(frontmatter, ["yaml"])
+    .use(html)
+    .process(data);
+
+  const doc = remark().use(frontmatter).parse(data);
+
+  const yamlNode = doc.children.find((node) => node.type === "yaml") as {
+    type: "yaml";
+    value: string;
+  };
+  let frontMatter;
+  if (yamlNode) {
+    frontMatter = parse(yamlNode?.value ?? "");
+  }
 
   return (
     <div className="min-h-screen py-24 px-24">
-      <div dangerouslySetInnerHTML={{ __html: result.toString() }} />
+      {frontMatter.symbol && (
+        <p className="font-bold text-6xl mb-12">{frontMatter.symbol}</p>
+      )}
+      <h1 className="font-bold text-6xl mb-12">{frontMatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: file.toString() }} />
     </div>
   );
 }
