@@ -32,9 +32,17 @@ Main:
   - title: GitHub
     account: "@BonyChops"
     si: siGithub
-    url: htt@s://github.com/BonyChops
+    url: https://github.com/BonyChops
 
 Others:
+  - title: Qiita
+    account: "@BonyChops"
+    si: siQiita
+    url: https://qiita.com/BonyChops
+  - title: Zenn
+    account: "bony_chops"
+    si: siZenn
+    url: https://zenn.dev/bony_chops
   - title: GitLab
     account: "@BonyChops"
     si: siGitlab
@@ -43,14 +51,10 @@ Others:
     account: "bony_chops"
     si: siNpm
     url: https://www.npmjs.com/~bony_chops
-  - title: PGP
-    account: "0x7B9C3B9B"
-    hex: "000000"
-    url: https://keybase.io/bonychops/pgp_keys.asc
-  - title: Keyoxide
-    account: "bonychops"
-    si: siKeyoxide
-    url: https://keyoxide.org/bonychops
+  # - title: PGP
+  #   account: "0x7B9C3B9B"
+  #   hex: "000000"
+  #   url: https://keybase.io/bonychops/pgp_keys.asc
 
 Sponsor:
   - title: GitHub Sponsor
