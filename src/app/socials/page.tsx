@@ -20,7 +20,7 @@ export default function Socials() {
   );
 
   return (
-    <div className="min-h-screen py-24 px-24">
+    <div className="min-h-screen md:py-24 py-8 md:px-24 px-4">
       <h2 className="text-4xl font-bold mb-10">Socials</h2>
       {Object.entries(socials).map(([category, socials]) => [
         <h3
