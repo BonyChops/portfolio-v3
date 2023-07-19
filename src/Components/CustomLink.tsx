@@ -13,11 +13,15 @@ export const CustomLink: React.FC<
     style?: React.CSSProperties;
   }>
 > = ({ href, children, onClick, className, style }) => {
+  const isExternal = href?.startsWith("http") ?? false;
   return (
     <>
       <Link
         href={href ?? "#"}
         onClick={(e) => {
+          if (isExternal) {
+            return;
+          }
           NProgress.configure({ showSpinner: false });
           NProgress.start();
           if (onClick) {
@@ -26,6 +30,7 @@ export const CustomLink: React.FC<
         }}
         style={style}
         className={className ?? ""}
+        target={isExternal ? "_blank" : ""}
       >
         {children}
       </Link>
