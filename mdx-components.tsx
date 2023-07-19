@@ -29,6 +29,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </ul>
     ),
+    a: ({ children }) => (
+      <a className="text-blue-500 hover:text-blue-700 transition-colors">
+        {children}
+      </a>
+    ),
     // a: ({ children, ...props }) => (
     //   <CustomLink {...props}>{children}</CustomLink>
     // ),
