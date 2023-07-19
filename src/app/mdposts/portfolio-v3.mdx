@@ -1,0 +1,37 @@
+export const meta = {
+  title: "portfolio-v3",
+  symbol: "📝",
+  date: "2023-07-17T04:36:21.594Z",
+  //   image: "/assets/images/posts/portfolio-v3.png",
+  tags: ["nextjs", "react", "firebase", "mdx", "tailwindcss", "typescript"],
+};
+import { siGithub } from "simple-icons";
+import SimpleIconComponent from "@/Components/SimpleIconComponent";
+
+いまご覧になっているページです！2023 年の 7 月頃にリリースしました。
+
+## 技術的な話
+
+[bonychops.com v2](https://v2.bonychops.com) は React のみ で作成していましたが _(えっ？)_、今回は Next.js で作成しました。  
+SSG で作りたい気持ちがあったので、元来は Gatsby.js を採用する予定でしたが、どうやら Next.js も SSG に対応しているとのことで、こちらを採用したという感じです。
+
+## 苦労した点
+
+`/posts`以下を mdx で記述できる仕様に苦労しました。まさにここのページですね。  
+当初からここは Markdown で書きたいと思っていたので、
+[Next.js 公式のガイド](https://nextjs.org/learn/basics/dynamic-routes/render-markdown)に従って remark 使ったり、[v13 からの Dynamic Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)は書き方が違ったり、mdx ならそもそも remark ではなく[`@next/mdx`](https://nextjs.org/docs/pages/building-your-application/configuring/mdx)を使えば良かったり、でもこいつは frontmatter 対応してなかったり...
+
+## 気になる点
+
+- コードブロック(`これ`)に Syntax Highlight を入れたい
+  - なぜか`rehype-pretty-code`がうまく反映されない...
+- ~~**この**箇条書き、なぜが左により過ぎでは？(誰かが`padding: 0`をしているけど、犯人がわからない...)~~
+  - 無理やり`padding: revert`で解除させた
+- 上記で気付いたけど、取り消し線効いてなくないか
+  - GFM というのが必要らしい、`remark-gfm`を導入
+- わざわざ`<CustomLink />`なるものを作ったのに、うまく反映させられていない
+- せっかく mdx にしたのに`a`タグに Component を並べると`flex`にならない、したらしたで別の場所で flex 以外の要素と段落が分かれる！
+
+## 関連リンク
+
+- [GitHub](https://github.com/BonyChops/portfolio-v3)

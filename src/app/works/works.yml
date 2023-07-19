@@ -1,5 +1,70 @@
 - title: portfolio-v3
-  description: このページです
+  img: /assets/images/works/portfolio-v3.png
+  description: このページ
   links:
+    - title: 詳細
+      url: /posts/portfolio-v3
     - title: GitHub
       url: https://github.com/BonyChops/portfolio-v3
+- title: アトリエももも
+  description: 地域の福利医療機関のホームページ
+  img: /assets/images/works/ateliermomomo.png
+  links:
+    - title: アトリエももも
+      url: https://ateliermomomo.com/
+- title: TENTEN
+  description: Hack U KOSEN 2022 最優秀賞
+  img: /assets/images/works/tenten.png
+  links:
+    - title: 詳細
+      url: posts/tenten
+- title: COVIDiffuser
+  description: WebxIoT メイカーズチャレンジ 2020-21 in 信州 特別賞
+  img: /assets/images/works/covidiffuser.png
+  links:
+    - title: 詳細
+      url: posts/covidiffuser
+- title: OVER4SJ
+  description: 長野高専第56回工嶺祭 4SJ合同クラス企画ホームページ
+  img: /assets/images/works/over4sj.png
+  links:
+    - title: 詳細
+      url: posts/over4sj
+    - title: OVER4SJ
+      url: https://over.nnct18j.com/
+
+- title: Game-Console-Activity-to-Discord
+  description: Discordであなたのゲーム機でのアクティビティを共有しよう！
+  links:
+    - title: 詳細
+      url: /posts/gcatd
+    - title: GitHub
+      url: https://github.com/BonyChops/Game-Console-Activity-to-Discord
+- title: spacha
+  description: YouTubeのスーパーチャット風ジェネレータ
+  img: /assets/images/works/spacha.png
+  links:
+    - title: 詳細
+      url: posts/spacha
+    - title: GitHub
+      url: https://github.com/BonyChops/spacha
+    - title: Docs
+      url: https://spacha.b7s.dev
+- title: fetch-kosen-syllabus
+  description: 高専のシラバスを取得するためのCLIツール
+  links:
+    - title: 詳細
+      url: /posts/fetch-kosen-syllabus
+- title: arai
+  description: シンプルな一問一答Webアプリ
+  links:
+    - title: 詳細
+      url: /posts/arai
+    - title: arai
+      url: https://arai.b7s.dev
+- title: AviUtl Project Transfer
+  description: AviUtlのプロジェクトファイルを他のPCに移動するためのツール
+  img: /assets/images/works/apt.png
+  links:
+    - title: 詳細
+      url: /posts/apt

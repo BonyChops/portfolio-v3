@@ -1,11 +1,20 @@
+import { SimpleIcon } from "simple-icons";
 import SimpleIconComponent from "./SimpleIconComponent";
+
+type HeroIcon = React.ForwardRefExoticComponent<
+  Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+    title?: string | undefined;
+    titleId?: string | undefined;
+  } & React.RefAttributes<SVGSVGElement>
+>;
 
 export default function Tag(props: {
   title: string;
-  iconData?: /*simpleicon*/ any;
+  iconData?: SimpleIcon | undefined | null;
+  HeroIcon?: HeroIcon;
   className?: string;
 }) {
-  const { title, iconData, className } = props;
+  const { title, iconData, className, HeroIcon } = props;
   return (
     <a
       href="#"
@@ -14,6 +23,7 @@ export default function Tag(props: {
         className
       }
     >
+      {HeroIcon && <HeroIcon className="h-6 w-6 mr-2 flex-shrink-0" />}
       {iconData && (
         <SimpleIconComponent size={16} iconData={iconData} className="mr-2" />
       )}

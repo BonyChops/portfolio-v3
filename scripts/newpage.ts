@@ -37,21 +37,21 @@ const main = () => {
     return emojis[Math.floor(Math.random() * emojis.length)];
   })();
 
-  const content = `---
-title: ${name}
-date: ${new Date().toISOString()}
-# symbol: ${randomEmoji}
-# image: /assets/images/posts/${name}.png
-# tags: []
----
+  const content = `export const meta = {
+  title: "${name}",
+  symbol: "${randomEmoji}",
+  date: "${new Date().toISOString()}",
+  //   image: "/assets/images/posts/${name}.png",
+  //   tags: [],
+};
 `;
 
   fs.writeFileSync(
-    path.resolve(__dirname, `../src/posts/${name}.md`),
+    path.resolve(__dirname, `../src/app/mdposts/${name}.mdx`),
     content,
     "utf-8"
   );
-  console.log(`Created src/posts/${name}.md`);
+  console.log(`Created src/app/mdposts/${name}.mdx`);
 };
 
 main();
