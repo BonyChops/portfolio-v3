@@ -1,6 +1,7 @@
 import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 import {
   SimpleIcon,
+  siFastify,
   siFirebase,
   siGithub,
   siGooglecloud,
@@ -15,6 +16,7 @@ import {
   siPython,
   siRaspberrypi,
   siReact,
+  siSocketdotio,
   siTailwindcss,
   siTypescript,
 } from "simple-icons";
@@ -112,5 +114,13 @@ export const tags: Tags = {
     name: "Deprecated",
     heroIcon: ExclamationCircleIcon,
     className: "text-yellow-500 dark:text-yellow-400",
+  },
+  fastify: {
+    name: "Fastify",
+    icon: siFastify,
+  },
+  websocket: {
+    name: "WebSocket",
+    icon: siSocketdotio,
   },
 };
