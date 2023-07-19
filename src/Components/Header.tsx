@@ -100,14 +100,6 @@ export default function Header() {
             onClick={() => {
               setShowMenu(false);
             }}
-            href="/posts/2023-06-24"
-          >
-            Post Page [Sample]
-          </HeaderLink>
-          <HeaderLink
-            onClick={() => {
-              setShowMenu(false);
-            }}
             href="https://v2.bonychops.com"
             className="mt-10"
           >
@@ -115,7 +107,7 @@ export default function Header() {
           </HeaderLink>
         </div>
       )}
-      <div className="fixed top-16 right-0 mr-24 flex">
+      <div className="fixed md:top-16 top-8 right-0 md:mr-24 mr-8 flex">
         {/* <button
           onClick={() => {
             toggleDarkMode();
