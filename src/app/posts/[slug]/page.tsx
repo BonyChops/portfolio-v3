@@ -11,6 +11,13 @@ import Tag from "@/Components/Tag";
 import { tags } from "@/utils/tags";
 // import Posts from "@/Components/Posts";
 
+type HeroIcon = React.ForwardRefExoticComponent<
+  Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+    title?: string | undefined;
+    titleId?: string | undefined;
+  } & React.RefAttributes<SVGSVGElement>
+>;
+
 export async function generateStaticParams() {
   const posts = fs
     .readdirSync(path.join(process.cwd(), "src/app/mdposts"))
@@ -28,6 +35,7 @@ interface Meta {
   tags: string[];
   image?: string;
   symbol?: string;
+  Heroicon?: HeroIcon;
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -70,6 +78,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
       )}
       {meta.symbol && !meta.image && (
         <p className="font-bold text-6xl mb-12">{meta.symbol}</p>
+      )}
+      {meta.Heroicon && (
+        <p className="font-bold text-6xl mb-12">
+          {<meta.Heroicon className="w-16 h-16" />}
+        </p>
       )}
       <h1 className="font-bold text-6xl mb-4">{meta.title}</h1>
       {meta.tags && meta.tags.length > 0 && (

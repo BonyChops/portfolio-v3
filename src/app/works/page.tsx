@@ -1,11 +1,14 @@
 import { CustomLink } from "@/Components/CustomLink";
+import * as heroIcons from "@heroicons/react/24/solid";
 import fs from "fs";
+import React from "react";
 import { parse } from "yaml";
 
 interface Work {
   title: string;
   description: string;
   img?: string;
+  heroicon?: keyof typeof heroIcons;
   links?: {
     title: string;
     url: string;
@@ -30,14 +33,23 @@ export default function Works() {
             key={k}
           >
             <div
-              className="w-full rounded-t-xl h-32 bg-gray-500 bg-cover bg-no-repeat"
-              style={{
-                backgroundImage: `url(${
-                  work.img ??
-                  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/MtFuji_FujiCity.jpg/220px-MtFuji_FujiCity.jpg"
-                })`,
-              }}
-            ></div>
+              className="w-full rounded-t-xl h-32  bg-cover bg-no-repeat"
+              style={
+                work.img
+                  ? {
+                      backgroundImage: `url(${work.img})`,
+                    }
+                  : {}
+              }
+            >
+              {work.heroicon && (
+                <div className="h-full flex flex-col justify-between">
+                  {React.createElement(heroIcons[work.heroicon], {
+                    className: "w-16 h-16 mx-auto my-auto",
+                  })}
+                </div>
+              )}
+            </div>
 
             <div className="px-2 py-2 flex flex-col justify-between flex-grow">
               <div className="mb-4">
