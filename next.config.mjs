@@ -28,6 +28,7 @@ const withMDX = nextMdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  trailingSlash: true,
   images: {
     dangerouslyAllowSVG: true,
     domains: ["cdn.simpleicons.org"],
