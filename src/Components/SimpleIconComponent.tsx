@@ -17,7 +17,7 @@ export default function SimpleIconComponent(props: {
       height={size}
       src={`https://cdn.simpleicons.org/${slug ?? iconData.slug}/${
         hex ?? iconData.hex
-      }.svg`}
+      }`}
       alt={alt ?? `${slug} icon`}
       className={className}
     />

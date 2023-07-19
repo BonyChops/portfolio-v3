@@ -1,0 +1,64 @@
+Contact:
+  - title: Mail
+    account: "contact@bonychops.com"
+    si: siGmail
+    url: "mailto:contact@bonychops.com"
+  - title: Discord
+    private: true
+    si: siDiscord
+  - title: LINE
+    private: true
+    si: siLine
+  - title: KeyBase
+    account: bonychops
+    url: https://keybase.io/bonychops
+    si: siKeybase
+
+Main:
+  - title: Twitter
+    account: "@BonyChops"
+    si: siTwitter
+    url: https://twitter.com/BonyChops
+  - title: Twitter
+    account: "@BonyDaily"
+    si: siTwitter
+    url: https://twitter.com/BonyChops
+  - title: Misskey
+    account: "@BonyChops@misskey.io"
+    si: siMisskey
+  - title: Misskey
+    account: "@BonyChops@misskey.nnct18j.com"
+    si: siMisskey
+  - title: GitHub
+    account: "@BonyChops"
+    si: siGithub
+    url: htt@s://github.com/BonyChops
+
+Others:
+  - title: GitLab
+    account: "@BonyChops"
+    si: siGitlab
+    url: https://gitlab.com/BonyChops
+  - title: npm
+    account: "bony_chops"
+    si: siNpm
+    url: https://www.npmjs.com/~bony_chops
+  - title: PGP
+    account: "0x7B9C3B9B"
+    hex: "000000"
+    url: https://keybase.io/bonychops/pgp_keys.asc
+  - title: Keyoxide
+    account: "bonychops"
+    si: siKeyoxide
+    url: https://keyoxide.org/bonychops
+
+Sponsor:
+  - title: GitHub Sponsor
+    account: "@BonyChops"
+    si: siGithub
+    hex: "ea4aaa"
+    url: https://github.com/sponsors/BonyChops
+  - title: Paypal
+    account: "@BonyChops"
+    si: siPaypal
+    url: https://www.paypal.me/BonyChops

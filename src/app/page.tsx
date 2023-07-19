@@ -60,10 +60,25 @@ export default function Home() {
                       365.25
                   )} 歳`,
                   PGPキー: "457B F5D6 9ECE 0883",
+                  資格: [
+                    "TOEIC L&R 860点",
+                    "英検 2級",
+                    "普通自動車第一種運転免許",
+                  ],
                 }).map((v, k) => (
-                  <tr key={k}>
+                  <tr key={k} className="align-top">
                     <th className="pr-12 text-right">{v[0]}</th>
-                    <td>{v[1]}</td>
+                    <td>
+                      {Array.isArray(v[1]) ? (
+                        <ul className="list-none">
+                          {v[1].map((v, k) => (
+                            <li key={k}>{v}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        v[1]
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>

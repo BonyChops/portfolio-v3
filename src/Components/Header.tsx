@@ -88,14 +88,14 @@ export default function Header() {
           >
             Works
           </HeaderLink>
-          {/* <HeaderLink
+          <HeaderLink
             onClick={() => {
               setShowMenu(false);
             }}
-            href="/contacts"
+            href="/socials"
           >
-            Contacts
-          </HeaderLink> */}
+            Socials
+          </HeaderLink>
           <HeaderLink
             onClick={() => {
               setShowMenu(false);
