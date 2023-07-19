@@ -17,19 +17,19 @@
   img: /assets/images/works/tenten.png
   links:
     - title: 詳細
-      url: posts/tenten
+      url: /posts/tenten
 - title: COVIDiffuser
   description: WebxIoT メイカーズチャレンジ 2020-21 in 信州 特別賞
   img: /assets/images/works/covidiffuser.png
   links:
     - title: 詳細
-      url: posts/covidiffuser
+      url: /posts/covidiffuser
 - title: OVER4SJ
   description: 長野高専第56回工嶺祭 4SJ合同クラス企画ホームページ
   img: /assets/images/works/over4sj.png
   links:
     - title: 詳細
-      url: posts/over4sj
+      url: /posts/over4sj
     - title: OVER4SJ
       url: https://over.nnct18j.com/
 
@@ -46,7 +46,7 @@
   img: /assets/images/works/spacha.png
   links:
     - title: 詳細
-      url: posts/spacha
+      url: /posts/spacha
     - title: GitHub
       url: https://github.com/BonyChops/spacha
     - title: Docs
