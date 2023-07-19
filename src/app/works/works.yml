@@ -35,6 +35,7 @@
 
 - title: Game-Console-Activity-to-Discord
   description: Discordであなたのゲーム機でのアクティビティを共有しよう！
+  img: /assets/images/works/gcatd.jpg
   links:
     - title: 詳細
       url: /posts/gcatd
@@ -52,11 +53,13 @@
       url: https://spacha.b7s.dev
 - title: fetch-kosen-syllabus
   description: 高専のシラバスを取得するためのCLIツール
+  heroicon: CommandLineIcon
   links:
     - title: 詳細
       url: /posts/fetch-kosen-syllabus
 - title: arai
   description: シンプルな一問一答Webアプリ
+  img: /assets/images/works/arai.png
   links:
     - title: 詳細
       url: /posts/arai
