@@ -5,7 +5,6 @@ import matter from "gray-matter";
 import { parse } from "yaml";
 import dynamic from "next/dynamic";
 
-import "../../../styles/posts.css";
 import Image from "next/image";
 import Tag from "@/Components/Tag";
 import { tags } from "@/utils/tags";
