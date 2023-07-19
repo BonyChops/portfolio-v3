@@ -26,9 +26,11 @@ Main:
   - title: Misskey
     account: "@BonyChops@misskey.io"
     si: siMisskey
+    url: https://misskey.io/@BonyChops
   - title: Misskey
     account: "@BonyChops@misskey.nnct18j.com"
     si: siMisskey
+    url: https://misskey.nnct18j.com/@BonyChops
   - title: GitHub
     account: "@BonyChops"
     si: siGithub
