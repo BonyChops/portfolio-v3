@@ -29,6 +29,7 @@ import {
   siUbuntu,
 } from "simple-icons";
 import Image from "next/image";
+import { CustomLink } from "@/Components/CustomLink";
 
 export default function TimeLine() {
   const [showAll, setShowAll] = useState(false);
@@ -57,6 +58,16 @@ export default function TimeLine() {
           <p className="text-xl font-bold">Show All</p>
         </button>
       </div>
+      <p className="text-center my-4">
+        See also:{" "}
+        <CustomLink
+          href="https://wantedly.com/id/Bony_Chops"
+          className="text-blue-600"
+        >
+          Wantedly
+        </CustomLink>
+      </p>
+
       <div className="flex flex-col items-center">
         <TimeTreeEvent noAbove>
           <p className="text-sm opacity-60">2002.07.30・0 y.o.</p>
@@ -201,6 +212,11 @@ export default function TimeLine() {
               className="mr-2 mb-2"
             />
           </div>
+          <p>
+            <CustomLink href="/posts/covidiffuser" className="text-blue-600">
+              詳細
+            </CustomLink>
+          </p>
         </TimeTreeEvent>
         {showAll && (
           <TimeTreeEvent>
@@ -249,6 +265,11 @@ export default function TimeLine() {
               className="mr-2 mb-2"
             />
           </div>
+          <p>
+            <CustomLink href="/posts/tenten" className="text-blue-600">
+              詳細
+            </CustomLink>
+          </p>
         </TimeTreeEvent>
         <TimeTreeEvent>
           <p className="text-sm opacity-60">2023.03・20 y.o.</p>
