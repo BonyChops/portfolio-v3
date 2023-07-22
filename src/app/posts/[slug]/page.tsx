@@ -8,14 +8,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Tag from "@/Components/Tag";
 import { tags } from "@/utils/tags";
+import { getPostData } from "@/lib/post";
 // import Posts from "@/Components/Posts";
-
-type HeroIcon = React.ForwardRefExoticComponent<
-  Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-    title?: string | undefined;
-    titleId?: string | undefined;
-  } & React.RefAttributes<SVGSVGElement>
->;
 
 export async function generateStaticParams() {
   const posts = fs
@@ -29,47 +23,34 @@ export async function generateStaticParams() {
   }));
 }
 
-interface Meta {
-  title: string;
-  tags: string[];
-  image?: string;
-  symbol?: string;
-  Heroicon?: HeroIcon;
-}
-
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }) {
   const { slug } = params;
-  const targetPath = path.join(process.cwd(), `src/app/mdposts/${slug}.mdx`);
-  if (!fs.existsSync(targetPath)) {
-    // response as 404
-    return { title: "Post not found" };
-  }
+  const meta = await getPostData(slug);
 
-  const { meta } = (await import(`../../mdposts/${slug}.mdx`)) as {
-    meta: Meta;
-  };
+  if (!meta) {
+    return {
+      title: "404",
+    };
+  }
 
   return { title: meta.title };
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const targetPath = path.join(process.cwd(), `src/app/mdposts/${slug}.mdx`);
-  if (!fs.existsSync(targetPath)) {
+
+  const meta = await getPostData(slug);
+
+  if (!meta) {
     // response as 404
-    return <div>Post not found {targetPath}</div>;
+    return <div>Post not found: {slug}</div>;
   }
-  const data = fs.readFileSync(targetPath, "utf-8");
 
   const DynamicComponent = dynamic(() => import(`../../mdposts/${slug}.mdx`));
-
-  const { meta } = (await import(`../../mdposts/${slug}.mdx`)) as {
-    meta: Meta;
-  };
 
   return (
     <div className="min-h-screen py-24 md:px-24 px-8">
