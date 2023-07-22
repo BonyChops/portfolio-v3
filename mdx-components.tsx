@@ -37,6 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </a>
     ),
+    p: ({ children }) => <p className="my-4">{children}</p>,
     // a: ({ children, ...props }) => (
     //   <CustomLink {...props}>{children}</CustomLink>
     // ),
