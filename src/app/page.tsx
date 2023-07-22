@@ -129,7 +129,7 @@ export default function Home() {
           {/* Vertically middle */}
           <div className="px-10 w-full h-32 align-middle flex flex-col items-center justify-center text-center">
             <p>BonyChops / portfolio-v3</p>
-            <p>Commit: 770ef26</p>
+            {/* <p>Commit: 770ef26</p> */}
           </div>
         </div>
       </div>
