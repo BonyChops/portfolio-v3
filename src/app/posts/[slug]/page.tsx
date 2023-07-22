@@ -37,9 +37,24 @@ interface Meta {
   Heroicon?: HeroIcon;
 }
 
-export const metadata = {
-  title: "Works",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
+  const targetPath = path.join(process.cwd(), `src/app/mdposts/${slug}.mdx`);
+  if (!fs.existsSync(targetPath)) {
+    // response as 404
+    return { title: "Post not found" };
+  }
+
+  const { meta } = (await import(`../../mdposts/${slug}.mdx`)) as {
+    meta: Meta;
+  };
+
+  return { title: meta.title };
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;

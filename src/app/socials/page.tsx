@@ -14,6 +14,10 @@ type Socials = {
   }>;
 };
 
+export const metadata = {
+  title: "Socials",
+};
+
 export default function Socials() {
   const socials: Socials = parse(
     fs.readFileSync("src/app/socials/socials.yml", "utf-8")

@@ -5,9 +5,13 @@ import ProgressHandler from "@/Components/ProgressHandler";
 import Header from "@/Components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
+const siteName = "Bony_Chops";
 
 export const metadata = {
-  title: "Bony_Chops",
+  title: {
+    default: siteName,
+    template: `%s - ${siteName}`,
+  },
   description: "Bony_Chopsのポートフォリオサイトです",
 };
 

@@ -18,6 +18,10 @@ interface Work {
 
 interface Works extends Array<Work> {}
 
+export const metadata = {
+  title: "Works",
+};
+
 export default function Works() {
   const works: Works = parse(
     fs.readFileSync("src/app/works/works.yml", "utf-8")
