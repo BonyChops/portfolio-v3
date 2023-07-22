@@ -37,6 +37,10 @@ interface Meta {
   Heroicon?: HeroIcon;
 }
 
+export const metadata = {
+  title: "Works",
+};
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const targetPath = path.join(process.cwd(), `src/app/mdposts/${slug}.mdx`);
@@ -46,25 +50,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
   const data = fs.readFileSync(targetPath, "utf-8");
 
-  // gray-matter を使ってフロントマターをパース
-  const { content, data: frontMatter } = matter(data);
-  // const compiled = await parseMdx(content);
   const DynamicComponent = dynamic(() => import(`../../mdposts/${slug}.mdx`));
-  // const meta = dynamic(() =>
-  //   import(`../../mdposts/${slug}.mdx`).then((mod) => mod.meta)
-  // );
+
   const { meta } = (await import(`../../mdposts/${slug}.mdx`)) as {
     meta: Meta;
   };
-  // const yamlNode = doc.children.find((node) => node.type === "yaml") as {
-  //   type: "yaml";
-  //   value: string;
-  // };
-  // let frontMatter;
-  // if (yamlNode) {
-  //   frontMatter = parse(yamlNode?.value ?? "");
-  // }
-  // test();
 
   return (
     <div className="min-h-screen py-24 md:px-24 px-8">
