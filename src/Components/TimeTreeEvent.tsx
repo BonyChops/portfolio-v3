@@ -22,7 +22,7 @@ export default function TimeTreeEvent(props: {
           <div className="h-full border-l-2 border-gray-300 mx-auto -z-10" />
         </div>
       </div>
-      <div className="w-72 py-4 ">
+      <div className="md:w-72 w-64 py-4 ">
         <div
           className={`rounded-xl shadow-xl w-full min-h-full px-4 py-2 ${
             boxClassName ?? "bg-white dark:bg-gray-600 dark:bg-opacity-60"

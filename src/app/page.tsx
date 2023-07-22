@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen pt-24">
       <div className="flex flex-col items-center justify-between ">
-        <div className="fixed xl:block md:flex place-items-center  xl:pr-[500px]">
+        <div className="fixed xl:block md:flex place-items-center xl:pr-[500px]">
           <div className="">
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert bg-white rounded-full mr-20"
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col xl:ml-[500px]">
-          <div className="relative mt-96 xl:mt-0 md:mt-64 py-20 px-10 w-full bg-slate-100 dark:bg-black md:rounded-xl backdrop-blur-sm md:max-w-2xl transition-opacity bg-opacity-90 dark:bg-opacity-70">
+          <div className="relative mt-96 xl:mt-0 md:mt-64 py-20 md:px-10 px-5 w-full bg-slate-100 dark:bg-black md:rounded-xl backdrop-blur-sm md:max-w-2xl transition-opacity bg-opacity-90 dark:bg-opacity-70">
             <h2 className="text-3xl font-bold">Profile</h2>
             <table className="text-lg mb-8">
               <tbody>
