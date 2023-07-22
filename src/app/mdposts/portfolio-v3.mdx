@@ -21,6 +21,8 @@ SSG で作りたい気持ちがあったので、元来は Gatsby.js を採用�
 当初からここは Markdown で書きたいと思っていたので、
 [Next.js 公式のガイド](https://nextjs.org/learn/basics/dynamic-routes/render-markdown)に従って remark 使ったり、[v13 からの Dynamic Routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)は書き方が違ったり、mdx ならそもそも remark ではなく[`@next/mdx`](https://nextjs.org/docs/pages/building-your-application/configuring/mdx)を使えば良かったり、でもこいつは frontmatter 対応してなかったり...
 
+最終的に、こんな感じ([mdx 置き場](https://github.com/BonyChops/portfolio-v3/tree/main/src/app/mdposts))に書くと、それに準じてページが生成されるようにできました。
+
 ## 気になる点
 
 - コードブロック(`これ`)に Syntax Highlight を入れたい
