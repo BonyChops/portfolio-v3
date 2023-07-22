@@ -20,13 +20,7 @@ import {
   siTailwindcss,
   siTypescript,
 } from "simple-icons";
-
-type HeroIcon = React.ForwardRefExoticComponent<
-  Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-    title?: string | undefined;
-    titleId?: string | undefined;
-  } & React.RefAttributes<SVGSVGElement>
->;
+import { HeroIcon } from "@/lib/heroicon";
 
 type Tags = {
   [key: string]: {

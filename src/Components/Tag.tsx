@@ -1,12 +1,6 @@
 import { SimpleIcon } from "simple-icons";
 import SimpleIconComponent from "./SimpleIconComponent";
-
-type HeroIcon = React.ForwardRefExoticComponent<
-  Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-    title?: string | undefined;
-    titleId?: string | undefined;
-  } & React.RefAttributes<SVGSVGElement>
->;
+import { HeroIcon } from "@/lib/heroicon";
 
 export default function Tag(props: {
   title: string;
