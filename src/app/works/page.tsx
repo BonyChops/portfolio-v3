@@ -3,6 +3,7 @@ import * as heroIcons from "@heroicons/react/24/solid";
 import fs from "fs";
 import React from "react";
 import { parse } from "yaml";
+import { generateOGMetadata } from "@/lib/opengraph";
 
 interface Work {
   title: string;
@@ -20,6 +21,7 @@ interface Works extends Array<Work> {}
 
 export const metadata = {
   title: "Works",
+  ...generateOGMetadata("Works"),
 };
 
 export default function Works() {

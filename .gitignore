@@ -36,3 +36,5 @@ next-env.d.ts
 
 .firebaserc
 .firebase/*.cache
+
+public/assets/images/og/

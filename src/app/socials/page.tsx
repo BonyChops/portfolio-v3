@@ -1,5 +1,6 @@
 import { CustomLink } from "@/Components/CustomLink";
 import SocialButton from "@/Components/SocialButton";
+import { generateOGMetadata } from "@/lib/opengraph";
 import fs from "fs";
 import { parse } from "yaml";
 
@@ -16,6 +17,7 @@ type Socials = {
 
 export const metadata = {
   title: "Socials",
+  ...generateOGMetadata("Socials"),
 };
 
 export default function Socials() {

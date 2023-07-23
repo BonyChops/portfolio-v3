@@ -18,8 +18,12 @@ import {
   siWebrtc,
 } from "simple-icons";
 import TimeLine from "./TimeLine";
+import { whiteOgpImageIfNotExists, writeOgpImage } from "@/lib/default";
+import { loadGoogleFont } from "@/lib/font";
 
-export default function Home() {
+export default async function Home() {
+  await whiteOgpImageIfNotExists();
+
   return (
     <div className="min-h-screen pt-24">
       <div className="flex flex-col items-center justify-between ">

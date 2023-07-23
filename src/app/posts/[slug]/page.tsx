@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs, { write } from "fs";
 import path from "path";
 import matter from "gray-matter";
 // import { compile } from "xdm";
@@ -8,8 +8,12 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Tag from "@/Components/Tag";
 import { tags } from "@/utils/tags";
-import { getPostData } from "@/lib/post";
+import { getPostData, writeOgpImage } from "@/lib/post";
+
 // import Posts from "@/Components/Posts";
+
+import * as heroIcon from "@heroicons/react/24/solid";
+import { loadGoogleFont } from "@/lib/font";
 
 export async function generateStaticParams() {
   const posts = fs
@@ -17,6 +21,17 @@ export async function generateStaticParams() {
     .map((post) => ({
       slug: post.replace(/\.mdx?$/, ""),
     }));
+
+  const fontMedium = await loadGoogleFont({
+    family: "Noto Sans JP",
+    weight: 700,
+  });
+
+  await Promise.all(
+    posts.map(async (post) => {
+      await writeOgpImage(post.slug, fontMedium);
+    })
+  );
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -30,6 +45,7 @@ export async function generateMetadata({
 }) {
   const { slug } = params;
   const meta = await getPostData(slug);
+  const imageUrl = `/assets/images/og/${slug}/ogp.png`;
 
   if (!meta) {
     return {
@@ -37,7 +53,22 @@ export async function generateMetadata({
     };
   }
 
-  return { title: meta.title };
+  return {
+    title: meta.title,
+    twitter: {
+      card: "summary_large_image",
+      images: [imageUrl],
+    },
+    openGraph: {
+      title: meta.title,
+      siteName: "Bony_Chops",
+      images: {
+        url: imageUrl,
+        width: 1200,
+        height: 600,
+      },
+    },
+  };
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -52,6 +83,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const DynamicComponent = dynamic(() => import(`../../mdposts/${slug}.mdx`));
 
+  const Heroicon = heroIcon[meta.heroicon as keyof typeof heroIcon];
+
   return (
     <div className="min-h-screen py-24 md:px-24 px-8">
       {meta.image && (
@@ -64,9 +97,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       {meta.symbol && !meta.image && (
         <p className="font-bold text-6xl mb-12">{meta.symbol}</p>
       )}
-      {meta.Heroicon && (
+      {Heroicon && (
         <p className="font-bold text-6xl mb-12">
-          {<meta.Heroicon className="w-16 h-16" />}
+          {<Heroicon className="w-16 h-16" />}
         </p>
       )}
       <h1 className="font-bold text-6xl mb-4">{meta.title}</h1>
