@@ -27,7 +27,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen pt-24">
       <div className="flex flex-col items-center justify-between ">
-        <div className="fixed xl:block md:flex place-items-center xl:pr-[500px]">
+        <div className="fixed xl:block md:flex place-items-center xl:pr-[500px] animate-slideup">
           <div className="">
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert bg-white rounded-full mr-20"
@@ -49,7 +49,9 @@ export default async function Home() {
         </div>
         <div className="flex flex-col xl:ml-[500px]">
           <div className="relative mt-96 xl:mt-0 md:mt-64 py-20 md:px-10 px-5 w-full bg-slate-100 dark:bg-black md:rounded-xl backdrop-blur-sm md:max-w-2xl transition-opacity bg-opacity-90 dark:bg-opacity-70">
-            <h2 className="text-3xl font-bold">Profile</h2>
+            <h2 className="text-3xl font-bold opacity-0 transform animate-slideup-delay">
+              Profile
+            </h2>
             <table className="text-lg mb-8">
               <tbody>
                 {Object.entries({
@@ -70,25 +72,36 @@ export default async function Home() {
                     "普通自動車第一種運転免許",
                   ],
                 }).map((v, k) => (
-                  <tr key={k} className="align-top">
-                    <th className="pr-12 text-right">{v[0]}</th>
+                  <tr key={k} className="align-top ">
+                    <th className="pr-12 text-right opacity-0 transform animate-slideup-delay">
+                      {v[0]}
+                    </th>
                     <td>
                       {Array.isArray(v[1]) ? (
                         <ul className="list-none">
                           {v[1].map((v, k) => (
-                            <li key={k}>{v}</li>
+                            <li
+                              key={k}
+                              className="opacity-0 transform animate-slideup-delay"
+                            >
+                              {v}
+                            </li>
                           ))}
                         </ul>
                       ) : (
-                        v[1]
+                        <span className="opacity-0 transform animate-slideup-delay">
+                          {v[1]}
+                        </span>
                       )}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <h2 className="text-3xl font-bold my-2">Skills</h2>
-            <h3 className="text-2xl font-bold my-2 bg-gradient-to-r bg-clip-text text-transparent from-yellow-400 to-yellow-950">
+            <h2 className="text-3xl font-bold my-2 opacity-0 transform animate-slideup-delay">
+              Skills
+            </h2>
+            <h3 className="text-2xl font-bold my-2 bg-gradient-to-r bg-clip-text text-transparent from-yellow-400 to-yellow-950 opacity-0 transform animate-slideup-delay">
               Main
             </h3>
             <div className="flex flex-wrap">
@@ -102,10 +115,17 @@ export default async function Home() {
                 React: siReact,
                 OAuth: null,
               }).map(([k, v], key) => (
-                <Tag key={key} iconData={v} title={k} className="mr-2 mb-2" />
+                <Tag
+                  key={key}
+                  iconData={v}
+                  title={k}
+                  className="mr-2 mb-2 opacity-0 transform animate-slideup-delay"
+                />
               ))}
             </div>
-            <h3 className="text-2xl font-bold my-2">I have</h3>
+            <h3 className="text-2xl font-bold my-2 opacity-0 transform animate-slideup-delay">
+              I have
+            </h3>
             <div className="flex flex-wrap">
               {Object.entries({
                 C: siC,
@@ -113,10 +133,17 @@ export default async function Home() {
                 Ruby: siRuby,
                 TypeScript: siTypescript,
               }).map(([k, v], key) => (
-                <Tag key={key} iconData={v} title={k} className="mr-2 mb-2" />
+                <Tag
+                  key={key}
+                  iconData={v}
+                  title={k}
+                  className="mr-2 mb-2 opacity-0 transform animate-slideup-delay"
+                />
               ))}
             </div>
-            <h3 className="text-2xl font-bold my-2">Learning</h3>
+            <h3 className="text-2xl font-bold my-2 opacity-0 transform animate-slideup-delay">
+              Learning
+            </h3>
             <div className="flex flex-wrap">
               {Object.entries({
                 "Next.js": siNextdotjs,
@@ -124,10 +151,17 @@ export default async function Home() {
                 Go: siGo,
                 WebAssembly: siWebassembly,
               }).map(([k, v], key) => (
-                <Tag key={key} iconData={v} title={k} className="mr-2 mb-2" />
+                <Tag
+                  key={key}
+                  iconData={v}
+                  title={k}
+                  className="mr-2 mb-2 opacity-0 transform animate-slideup-delay"
+                />
               ))}
             </div>
-            <h2 className="text-3xl font-bold mb-4 mt-8">Timeline</h2>
+            <h2 className="text-3xl font-bold mb-4 mt-8 opacity-0 transform animate-slideup-delay">
+              Timeline
+            </h2>
             <TimeLine />
           </div>
           {/* Vertically middle */}

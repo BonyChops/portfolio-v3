@@ -35,7 +35,7 @@ export default function TimeLine() {
   const [showAll, setShowAll] = useState(false);
   return (
     <div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center opacity-0 transform animate-slideup-delay">
         <button
           className="flex p-2"
           onClick={() => {
@@ -58,7 +58,7 @@ export default function TimeLine() {
           <p className="text-xl font-bold">Show All</p>
         </button>
       </div>
-      <p className="text-center my-4">
+      <p className="text-center my-4 opacity-0 transform animate-slideup-delay">
         See also:{" "}
         <CustomLink
           href="https://wantedly.com/id/Bony_Chops"
@@ -69,7 +69,10 @@ export default function TimeLine() {
       </p>
 
       <div className="flex flex-col items-center">
-        <TimeTreeEvent noAbove>
+        <TimeTreeEvent
+          noAbove
+          className="opacity-0 transform animate-slideup-delay"
+        >
           <p className="text-sm opacity-60">2002.07.30・0 y.o.</p>
           <p className="text-lg flex font-bold">
             <CakeIcon className="h-6 w-6 mr-2" />
@@ -77,7 +80,7 @@ export default function TimeLine() {
           </p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2012・10 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent
@@ -90,7 +93,7 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2013・11 y.o.</p>
             <p className="text-lg flex font-bold">
               <CommandLineIcon className="h-6 w-6 mr-2 flex-shrink-0" />
@@ -102,7 +105,7 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2017・15 y.o.</p>
             <p className="text-lg flex font-bold">
               <MusicalNoteIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -113,7 +116,7 @@ export default function TimeLine() {
             </div>
           </TimeTreeEvent>
         )}
-        <TimeTreeEvent>
+        <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
           <p className="text-sm opacity-60">2018.04・16 y.o.</p>
           <p className="text-lg flex font-bold">
             <AcademicCapIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -123,7 +126,7 @@ export default function TimeLine() {
         </TimeTreeEvent>
 
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2019.04・17 y.o.</p>
             <p className="text-lg flex font-bold">
               <AcademicCapIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -133,7 +136,7 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2019・19 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent
@@ -145,7 +148,7 @@ export default function TimeLine() {
             </p>
           </TimeTreeEvent>
         )}
-        <TimeTreeEvent>
+        <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
           <p className="text-sm opacity-60">2022.10 - 2023.07・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -154,7 +157,7 @@ export default function TimeLine() {
           <p>アルバイト</p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2020.04・19 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent
@@ -174,7 +177,7 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2020.05・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent
@@ -193,7 +196,10 @@ export default function TimeLine() {
             </div>
           </TimeTreeEvent>
         )}
-        <TimeTreeEvent boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900">
+        <TimeTreeEvent
+          className="opacity-0 transform animate-slideup-delay"
+          boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900"
+        >
           <p className="text-sm opacity-60">2020 10.7 - 10.28・18 y.o.</p>
           <p className="text-lg flex font-bold">
             <TrophyIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -219,7 +225,7 @@ export default function TimeLine() {
           </p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2021.04・18 y.o.</p>
             <p className="text-lg flex font-bold">
               <Image
@@ -233,7 +239,7 @@ export default function TimeLine() {
             </p>
           </TimeTreeEvent>
         )}
-        <TimeTreeEvent>
+        <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
           <p className="text-sm opacity-60">2022.10 - 2023.07・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -241,7 +247,10 @@ export default function TimeLine() {
           </p>
           <p>アルバイト</p>
         </TimeTreeEvent>
-        <TimeTreeEvent boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900">
+        <TimeTreeEvent
+          className="opacity-0 transform animate-slideup-delay"
+          boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900"
+        >
           <p className="text-sm opacity-60">2022 11.28 - 12.17・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <TrophyIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -271,14 +280,14 @@ export default function TimeLine() {
             </CustomLink>
           </p>
         </TimeTreeEvent>
-        <TimeTreeEvent>
+        <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
           <p className="text-sm opacity-60">2023.03・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <AcademicCapIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             長野工業高等専門学校 卒業
           </p>
         </TimeTreeEvent>
-        <TimeTreeEvent>
+        <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
           <p className="text-sm opacity-60">2023.04・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <AcademicCapIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -287,7 +296,7 @@ export default function TimeLine() {
           <p>知識情報・図書館学類</p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023.06・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <SimpleIconComponent size={24} iconData={siGo} className="mr-2" />
@@ -295,7 +304,10 @@ export default function TimeLine() {
             </p>
           </TimeTreeEvent>
         )}
-        <TimeTreeEvent noBottom={!showAll}>
+        <TimeTreeEvent
+          className="opacity-0 transform animate-slideup-delay"
+          noBottom={!showAll}
+        >
           <p className="text-sm opacity-60">2023.07 - 2023.09・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -304,7 +316,7 @@ export default function TimeLine() {
           <p>インターン</p>
         </TimeTreeEvent>
         {showAll && (
-          <TimeTreeEvent>
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -313,7 +325,10 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         {showAll && (
-          <TimeTreeEvent noBottom>
+          <TimeTreeEvent
+            className="opacity-0 transform animate-slideup-delay"
+            noBottom
+          >
             <p className="text-sm opacity-60">2023・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />

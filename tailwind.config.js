@@ -14,6 +14,16 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        slideup: {
+          "0%": { transform: "translateY(20%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        slideup: "slideup 0.3s ease-out forwards",
+        "slideup-delay": "slideup .3s .2s ease-out forwards",
+      },
     },
   },
   plugins: [],
