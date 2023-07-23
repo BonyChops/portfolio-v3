@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "ts-node scripts/fetchFonts.ts && next dev",
+    "build": "ts-node scripts/fetchFonts.ts && next build",
+    "start": "ts-node scripts/fetchFonts.ts && next start",
     "lint": "next lint",
-    "new": "ts-node scripts/newpage.ts"
+    "new": "ts-node scripts/newpage.ts",
+    "fetchFonts": "ts-node scripts/fetchFonts.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

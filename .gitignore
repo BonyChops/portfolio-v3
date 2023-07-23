@@ -38,3 +38,4 @@ next-env.d.ts
 .firebase/*.cache
 
 public/assets/images/og/
+fonts/

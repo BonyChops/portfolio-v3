@@ -12,10 +12,10 @@ export async function whiteOgpImageIfNotExists() {
     "ogp.png"
   );
   if (!fs.existsSync(ogPath)) {
-    const fontMedium = await loadGoogleFont({
-      family: "Noto Sans JP",
-      weight: 700,
-    });
+    const fontMedium = fs.readFileSync(
+      path.join(process.cwd(), "fonts/font.ttf")
+    );
+
     await writeOgpImage(fontMedium);
   }
 }

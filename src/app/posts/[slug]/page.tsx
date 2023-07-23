@@ -22,10 +22,9 @@ export async function generateStaticParams() {
       slug: post.replace(/\.mdx?$/, ""),
     }));
 
-  const fontMedium = await loadGoogleFont({
-    family: "Noto Sans JP",
-    weight: 700,
-  });
+  const fontMedium = fs.readFileSync(
+    path.join(process.cwd(), "fonts/font.ttf")
+  );
 
   await Promise.all(
     posts.map(async (post) => {
