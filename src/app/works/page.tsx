@@ -31,11 +31,11 @@ export default function Works() {
 
   return (
     <div className="min-h-screen md:py-24 py-8 md:px-24 px-8">
-      <h2 className="text-4xl font-bold mb-10 w-24">Works</h2>
+      <h2 className="text-4xl font-bold mb-10 w-24 animate-slideup">Works</h2>
       <div className="inline-flex flex-wrap justify-center mx-auto">
         {works.map((work, k) => (
           <div
-            className="rounded-xl w-72  bg-white dark:bg-gray-900 mr-2 mb-2 flex flex-col"
+            className="rounded-xl w-72  bg-white dark:bg-gray-900 mr-2 mb-2 flex flex-col opacity-0 transform animate-slideup-delay"
             key={k}
           >
             <div
