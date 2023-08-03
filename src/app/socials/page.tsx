@@ -27,10 +27,10 @@ export default function Socials() {
 
   return (
     <div className="min-h-screen md:py-24 py-8 md:px-24 px-4">
-      <h2 className="text-4xl font-bold mb-10">Socials</h2>
+      <h2 className="text-4xl font-bold mb-10 animate-slideup">Socials</h2>
       {Object.entries(socials).map(([category, socials]) => [
         <h3
-          className="text-3xl font-bold my-5"
+          className="text-3xl font-bold my-5 opacity-0 animate-slideup-delay"
           key={`socials_title_${category}`}
         >
           {category}
@@ -45,7 +45,7 @@ export default function Socials() {
               hex={social.hex}
               si={social.si}
               url={social.url}
-              className="mr-2 mb-2"
+              className="mr-2 mb-2 opacity-0 animate-slideup-delay"
             />
           ))}
         </div>,
