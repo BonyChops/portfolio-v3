@@ -321,6 +321,9 @@ export default function TimeLine() {
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             株式会社ナレッジワーク
           </p>
+          <div className="flex flex-wrap">
+            <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
+          </div>
           <p>Enablement Internship for Practical Development（インターン）</p>
         </TimeTreeEvent>
         {showAll && (
