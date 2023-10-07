@@ -316,7 +316,7 @@ export default function TimeLine() {
           className="opacity-0 transform animate-slideup-delay"
           noBottom={!showAll}
         >
-          <p className="text-sm opacity-60">2023・21 y.o.</p>
+          <p className="text-sm opacity-60">2023.08・21 y.o.</p>
           <p className="text-lg flex font-bold">
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             株式会社ナレッジワーク
