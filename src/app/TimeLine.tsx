@@ -320,7 +320,7 @@ export default function TimeLine() {
             />
             <Tag title="React" iconData={siReact} className="mr-2 mb-2" />
           </div>
-          <p>インターン</p>
+          <p>長期インターン</p>
         </TimeTreeEvent>
         <TimeTreeEvent
           className="opacity-0 transform animate-slideup-delay"
