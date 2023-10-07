@@ -15,13 +15,13 @@ Contact:
     si: siKeybase
 
 Main:
-  - title: Twitter
+  - title: X
     account: "@BonyChops"
-    si: siTwitter
+    si: siX
     url: https://twitter.com/BonyChops
-  - title: Twitter
+  - title: X
     account: "@BonyDaily"
-    si: siTwitter
+    si: siX
     url: https://twitter.com/BonyChops
   - title: Misskey
     account: "@BonyChops@misskey.io"
