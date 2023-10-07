@@ -305,7 +305,7 @@ export default function TimeLine() {
           </TimeTreeEvent>
         )}
         <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
-          <p className="text-sm opacity-60">2023.07 - 2023.09・20 y.o.</p>
+          <p className="text-sm opacity-60">2023.07 - 2023.10・20 y.o.</p>
           <p className="text-lg flex font-bold">
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             ピクシブ株式会社
