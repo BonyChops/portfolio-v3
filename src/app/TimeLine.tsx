@@ -26,6 +26,7 @@ import {
   siReact,
   siScratch,
   siSocketdotio,
+  siTypescript,
   siUbuntu,
 } from "simple-icons";
 import Image from "next/image";
@@ -310,7 +311,16 @@ export default function TimeLine() {
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             ピクシブ株式会社
           </p>
-          <p>インターン</p>
+          <div className="flex flex-wrap">
+            <Tag title="PHP" iconData={siPhp} className="mr-2 mb-2" />
+            <Tag
+              title="TypeScript"
+              iconData={siTypescript}
+              className="mr-2 mb-2"
+            />
+            <Tag title="React" iconData={siReact} className="mr-2 mb-2" />
+          </div>
+          <p>長期インターン</p>
         </TimeTreeEvent>
         <TimeTreeEvent
           className="opacity-0 transform animate-slideup-delay"
@@ -321,6 +331,9 @@ export default function TimeLine() {
             <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
             株式会社ナレッジワーク
           </p>
+          <div className="flex flex-wrap">
+            <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
+          </div>
           <p>Enablement Internship for Practical Development（インターン）</p>
         </TimeTreeEvent>
         {showAll && (
