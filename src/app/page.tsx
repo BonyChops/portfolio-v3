@@ -133,6 +133,8 @@ export default async function Home() {
                 Python: siPython,
                 Ruby: siRuby,
                 TypeScript: siTypescript,
+                "Next.js": siNextdotjs,
+                Go: siGo,
               }).map(([k, v], key) => (
                 <Tag
                   key={key}
@@ -147,9 +149,7 @@ export default async function Home() {
             </h3>
             <div className="flex flex-wrap">
               {Object.entries({
-                "Next.js": siNextdotjs,
                 WebRTC: siWebrtc,
-                Go: siGo,
                 WebAssembly: siWebassembly,
               }).map(([k, v], key) => (
                 <Tag
