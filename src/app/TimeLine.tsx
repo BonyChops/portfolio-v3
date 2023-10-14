@@ -95,7 +95,8 @@ export default function TimeLine() {
       <div className="flex flex-col items-center">
         <ReverseComponent reverse={!reverse}>
           <TimeTreeEvent
-            noAbove
+            noAbove={reverse}
+            noBottom={!reverse}
             className="opacity-0 transform animate-slideup-delay"
           >
             <p className="text-sm opacity-60">2002.07.30・0 y.o.</p>
@@ -360,7 +361,8 @@ export default function TimeLine() {
           </TimeTreeEvent>
           <TimeTreeEvent
             className="opacity-0 transform animate-slideup-delay"
-            noBottom={!showAll}
+            noBottom={!showAll && reverse}
+            noAbove={!showAll && !reverse}
           >
             <p className="text-sm opacity-60">2023.08・21 y.o.</p>
             <p className="text-lg flex font-bold">
@@ -375,7 +377,8 @@ export default function TimeLine() {
           {showAll && (
             <TimeTreeEvent
               className="opacity-0 transform animate-slideup-delay"
-              noBottom
+              noBottom={reverse}
+              noAbove={!reverse}
             >
               <p className="text-sm opacity-60">2023・21 y.o.</p>
               <p className="text-lg flex font-bold">
