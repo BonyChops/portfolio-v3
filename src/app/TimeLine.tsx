@@ -174,14 +174,6 @@ export default function TimeLine() {
               </p>
             </TimeTreeEvent>
           )}
-          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
-            <p className="text-sm opacity-60">2022.10 - 2023.07・20 y.o.</p>
-            <p className="text-lg flex font-bold">
-              <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-              株式会社ケイアイエスエス
-            </p>
-            <p>アルバイト</p>
-          </TimeTreeEvent>
           {showAll && (
             <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
               <p className="text-sm opacity-60">2020.04・19 y.o.</p>
