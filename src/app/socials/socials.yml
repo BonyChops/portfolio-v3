@@ -24,11 +24,11 @@ Main:
     si: siX
     url: https://twitter.com/BonyChops
   - title: Misskey
-    account: "@BonyChops@misskey.io"
+    account: "@misskey.io"
     si: siMisskey
     url: https://misskey.io/@BonyChops
   - title: Misskey
-    account: "@BonyChops@misskey.nnct18j.com"
+    account: "@misskey.nnct18j.com"
     si: siMisskey
     url: https://misskey.nnct18j.com/@BonyChops
   - title: GitHub
