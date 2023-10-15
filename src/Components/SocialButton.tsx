@@ -43,6 +43,7 @@ export default function SocialButton(props: {
             className="w-12 h-12 my-auto"
           />
         )}
+        {icon && <img src={icon} className="w-12 h-12 my-auto" />}
       </div>
       <div className="flex flex-col h-full  py-2 ">
         <p

@@ -12,6 +12,8 @@ type Socials = {
     url: string;
     hex?: string;
     si?: string;
+    icon?: string;
+    colorReverse?: boolean;
   }>;
 };
 
@@ -44,7 +46,9 @@ export default function Socials() {
               privateAccount={social.private}
               hex={social.hex}
               si={social.si}
+              icon={social.icon}
               url={social.url}
+              colorReverse={social.colorReverse}
               className="mr-2 mb-2 opacity-0 animate-slideup-delay"
             />
           ))}
