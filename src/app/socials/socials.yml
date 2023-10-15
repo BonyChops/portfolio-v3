@@ -66,6 +66,10 @@ Others:
     icon: https://img.atcoder.jp/assets/top/img/logo_bk.svg
     url: https://atcoder.jp/users/Bony_Chops
     colorReverse: true
+  - title: LeetCode
+    account: "bonychops"
+    si: siLeetcode
+    url: https://leetcode.com/bonychops/
 
   # - title: PGP
   #   account: "0x7B9C3B9B"
