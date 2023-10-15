@@ -61,6 +61,12 @@ Others:
     account: "@BonyChops"
     si: siDevdotto
     url: https://dev.to/bonychops
+  - title: AtCoder
+    account: Bony_Chops
+    icon: https://img.atcoder.jp/assets/top/img/logo_bk.svg
+    url: https://atcoder.jp/users/Bony_Chops
+    colorReverse: true
+
   # - title: PGP
   #   account: "0x7B9C3B9B"
   #   hex: "000000"
