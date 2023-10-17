@@ -351,11 +351,7 @@ export default function TimeLine() {
             </div>
             <p>長期インターン</p>
           </TimeTreeEvent>
-          <TimeTreeEvent
-            className="opacity-0 transform animate-slideup-delay"
-            noBottom={!showAll && reverse}
-            noAbove={!showAll && !reverse}
-          >
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023.08・21 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
@@ -366,19 +362,18 @@ export default function TimeLine() {
             </div>
             <p>Enablement Internship for Practical Development（インターン）</p>
           </TimeTreeEvent>
-          {showAll && (
-            <TimeTreeEvent
-              className="opacity-0 transform animate-slideup-delay"
-              noBottom={reverse}
-              noAbove={!reverse}
-            >
-              <p className="text-sm opacity-60">2023・21 y.o.</p>
-              <p className="text-lg flex font-bold">
-                <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-                ？？？
-              </p>
-            </TimeTreeEvent>
-          )}
+          <TimeTreeEvent
+            className="opacity-0 transform animate-slideup-delay"
+            noBottom={reverse}
+            noAbove={!reverse}
+          >
+            <p className="text-sm opacity-60">2023.10・21 y.o.</p>
+            <p className="text-lg flex font-bold">
+              <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
+              MIXI株式会社
+            </p>
+            <p>長期インターン</p>
+          </TimeTreeEvent>
         </ReverseComponent>
       </div>
     </div>
