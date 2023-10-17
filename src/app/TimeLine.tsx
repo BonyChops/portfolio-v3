@@ -351,11 +351,7 @@ export default function TimeLine() {
             </div>
             <p>長期インターン</p>
           </TimeTreeEvent>
-          <TimeTreeEvent
-            className="opacity-0 transform animate-slideup-delay"
-            noBottom={!showAll && reverse}
-            noAbove={!showAll && !reverse}
-          >
+          <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023.08・21 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
