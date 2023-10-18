@@ -55,7 +55,6 @@ export default async function Home() {
             <table className="text-lg mb-8">
               <tbody>
                 {Object.entries({
-                  名前: "鈴木 颯太",
                   所属: "筑波大学 情報学群 知識情報・図書館学類",
                   年齢: `${Math.floor(
                     (new Date().getTime() - new Date(2002, 6, 30).getTime()) /
