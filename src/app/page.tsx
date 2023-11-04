@@ -12,6 +12,7 @@ import {
   siPython,
   siReact,
   siRuby,
+  siSwift,
   siTypescript,
   siVisualstudiocode,
   siWebassembly,
@@ -150,6 +151,7 @@ export default async function Home() {
               {Object.entries({
                 WebRTC: siWebrtc,
                 WebAssembly: siWebassembly,
+                Swift: siSwift,
               }).map(([k, v], key) => (
                 <Tag
                   key={key}
