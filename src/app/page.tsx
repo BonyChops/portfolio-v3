@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   siAmazonaws,
   siC,
+  siDocker,
   siFirebase,
   siGit,
   siGithub,
@@ -137,6 +138,7 @@ export default async function Home() {
                 TypeScript: siTypescript,
                 "Next.js": siNextdotjs,
                 Go: siGo,
+                Docker: siDocker,
                 AWS: siAmazonaws,
                 Terraform: siTerraform,
               }).map(([k, v], key) => (
