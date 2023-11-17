@@ -1,6 +1,7 @@
 import Tag from "@/Components/Tag";
 import Image from "next/image";
 import {
+  siAmazonaws,
   siC,
   siFirebase,
   siGit,
@@ -13,6 +14,7 @@ import {
   siReact,
   siRuby,
   siSwift,
+  siTerraform,
   siTypescript,
   siVisualstudiocode,
   siWebassembly,
@@ -135,6 +137,8 @@ export default async function Home() {
                 TypeScript: siTypescript,
                 "Next.js": siNextdotjs,
                 Go: siGo,
+                AWS: siAmazonaws,
+                Terraform: siTerraform,
               }).map(([k, v], key) => (
                 <Tag
                   key={key}

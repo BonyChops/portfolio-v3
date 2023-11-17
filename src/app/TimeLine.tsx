@@ -13,6 +13,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import {
+  siAmazonaws,
   siFastify,
   siFirebase,
   siGithub,
@@ -26,6 +27,7 @@ import {
   siReact,
   siScratch,
   siSocketdotio,
+  siTerraform,
   siTypescript,
   siUbuntu,
 } from "simple-icons";
@@ -372,7 +374,16 @@ export default function TimeLine() {
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
               MIXI株式会社
             </p>
-            <p>長期インターン</p>
+            <div className="flex flex-wrap">
+              <Tag title="AWS" iconData={siAmazonaws} className="mr-2 mb-2" />
+              <Tag
+                title="Terraform"
+                iconData={siTerraform}
+                className="mr-2 mb-2"
+              />
+              <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
+            </div>
+            <p>SREグループ 長期インターン</p>
           </TimeTreeEvent>
         </ReverseComponent>
       </div>
