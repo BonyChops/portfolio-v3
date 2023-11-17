@@ -7,8 +7,9 @@ export default function Tag(props: {
   iconData?: SimpleIcon | undefined | null;
   HeroIcon?: HeroIcon;
   className?: string;
+  hex?: string;
 }) {
-  const { title, iconData, className, HeroIcon } = props;
+  const { title, iconData, className, HeroIcon, hex } = props;
   return (
     <a
       href="#"
@@ -19,7 +20,12 @@ export default function Tag(props: {
     >
       {HeroIcon && <HeroIcon className="h-6 w-6 mr-2 flex-shrink-0" />}
       {iconData && (
-        <SimpleIconComponent size={16} iconData={iconData} className="mr-2" />
+        <SimpleIconComponent
+          size={16}
+          iconData={iconData}
+          className="mr-2"
+          hex={hex}
+        />
       )}
       {title}
     </a>
