@@ -383,7 +383,7 @@ export default function TimeLine() {
               />
               <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
             </div>
-            <p>長期インターン</p>
+            <p>SREグループ 長期インターン</p>
           </TimeTreeEvent>
         </ReverseComponent>
       </div>
