@@ -28,7 +28,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen pt-24">
       <div className="flex flex-col items-center justify-between ">
-        <div className="fixed xl:block md:flex place-items-center xl:pr-[500px] animate-slideup">
+        <div className="fixed xl:block md:flex place-items-center xl:pr-[500px] animate-slideup select-none">
           <div className="">
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert bg-white rounded-full mr-20"
@@ -37,6 +37,9 @@ export default async function Home() {
               width={180}
               height={180}
               priority
+              style={{
+                pointerEvents: "none",
+              }}
             />
           </div>
           <div className="z-50">
