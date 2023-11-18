@@ -49,6 +49,10 @@ Others:
     account: "@BonyChops"
     si: siGitlab
     url: https://gitlab.com/BonyChops
+  - title: Medium
+    account: "@BonyChops"
+    si: siMedium
+    url: https://medium.com/@BonyChops
   - title: npm
     account: "bony_chops"
     si: siNpm
