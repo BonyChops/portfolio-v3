@@ -26,6 +26,7 @@ import { whiteOgpImageIfNotExists, writeOgpImage } from "@/lib/default";
 import { loadGoogleFont } from "@/lib/font";
 import { CustomLink } from "@/Components/CustomLink";
 import { DateTime } from "luxon";
+import CommitDate from "@/Components/CommitDate";
 
 export default async function Home() {
   await whiteOgpImageIfNotExists();
@@ -201,9 +202,7 @@ export default async function Home() {
                 >
                   {shortSha}
                 </CustomLink>{" "}
-                <span title={commitDate}>{`(${DateTime.fromISO(
-                  commitDate
-                ).toRelative()})`}</span>
+                <CommitDate commitDate={commitDate} />
               </p>
             )}
           </div>
