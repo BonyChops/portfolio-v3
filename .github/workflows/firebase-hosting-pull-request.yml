@@ -13,6 +13,10 @@ jobs:
         with:
           node-version: "18"
       - run: npm ci && npm run build
+        env:
+          NEXT_PUBLIC_GIT_COMMIT_SHA: ${{ github.sha }}
+          NEXT_PUBLIC_GIT_COMMIT_DATE: ${{ github.event.pull_request.updated_at }}
+          NEXT_PUBLIC_GITHUB_REPO_NAME: ${{ github.repository }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
