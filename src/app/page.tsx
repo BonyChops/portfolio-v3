@@ -24,9 +24,15 @@ import {
 import TimeLine from "./TimeLine";
 import { whiteOgpImageIfNotExists, writeOgpImage } from "@/lib/default";
 import { loadGoogleFont } from "@/lib/font";
+import { CustomLink } from "@/Components/CustomLink";
+import { DateTime } from "luxon";
 
 export default async function Home() {
   await whiteOgpImageIfNotExists();
+  const commitSha = process.env.NEXT_PUBLIC_GIT_COMMIT_SHA;
+  const shortSha = commitSha?.slice(0, 7);
+  const commitDate = process.env.NEXT_PUBLIC_GIT_COMMIT_DATE;
+  const repoName = process.env.NEXT_PUBLIC_GITHUB_REPO_NAME;
 
   return (
     <div className="min-h-screen pt-24">
@@ -177,8 +183,29 @@ export default async function Home() {
           </div>
           {/* Vertically middle */}
           <div className="px-10 w-full h-32 align-middle flex flex-col items-center justify-center text-center">
-            <p>BonyChops / portfolio-v3</p>
-            {/* <p>Commit: 770ef26</p> */}
+            {repoName && (
+              <p>
+                <CustomLink
+                  href={`https://github.com/${repoName}`}
+                  className="text-blue-600"
+                >
+                  {repoName.split("/").join(" / ")}
+                </CustomLink>
+              </p>
+            )}
+            {commitSha && commitDate && (
+              <p>
+                <CustomLink
+                  href={`https://github.com/${repoName}/commit/${commitSha}`}
+                  className="text-blue-600"
+                >
+                  {shortSha}
+                </CustomLink>{" "}
+                <span title={commitDate}>{`(${DateTime.fromISO(
+                  commitDate
+                ).toRelative()})`}</span>
+              </p>
+            )}
           </div>
         </div>
       </div>
