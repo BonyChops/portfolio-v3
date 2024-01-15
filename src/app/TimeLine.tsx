@@ -92,6 +92,13 @@ export default function TimeLine() {
         >
           Wantedly
         </CustomLink>
+        {", "}
+        <CustomLink
+          href="https://www.linkedin.com/in/bonychops/"
+          className="text-blue-600"
+        >
+          LinkedIn
+        </CustomLink>
       </p>
 
       <div className="flex flex-col items-center">
