@@ -79,12 +79,7 @@ export default async function Home() {
                       365.25
                   )} 歳`,
                   PGPキー: "457B F5D6 9ECE 0883",
-                  資格: [
-                    "基本情報技術者試験",
-                    "TOEIC L&R 860点",
-                    "英検 2級",
-                    "普通自動車第一種運転免許",
-                  ],
+                  資格: ["基本情報技術者試験", "TOEIC L&R 860点"],
                 }).map((v, k) => (
                   <tr key={k} className="align-top ">
                     <th className="pr-12 text-right opacity-0 transform animate-slideup-delay">
