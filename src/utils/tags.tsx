@@ -4,6 +4,8 @@ import {
   siFastify,
   siFirebase,
   siGithub,
+  siGithubactions,
+  siGo,
   siGooglecloud,
   siJavascript,
   siMaterialdesign,
@@ -116,5 +118,13 @@ export const tags: Tags = {
   websocket: {
     name: "WebSocket",
     icon: siSocketdotio,
+  },
+  golang: {
+    name: "Go",
+    icon: siGo,
+  },
+  githubactions: {
+    name: "GitHub Actions",
+    icon: siGithubactions,
   },
 };
