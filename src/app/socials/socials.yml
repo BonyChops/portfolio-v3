@@ -65,8 +65,8 @@ Others:
     account: "bonychops"
     si: siLinkedin
     url: https://www.linkedin.com/in/bonychops/
-  - title: DEV Community (dev.to)
     account: "@BonyChops"
+  - title: dev.to
     si: siDevdotto
     url: https://dev.to/bonychops
   - title: AtCoder
