@@ -65,6 +65,18 @@
       url: /posts/arai
     - title: arai
       url: https://arai.b7s.dev
+- title: misezan
+  description: 見せ算を計算するためのパッケージ群
+  heroicon: CalculatorIcon
+  links:
+    - title: 詳細
+      url: /posts/misezan
+- title: setup-openhsp
+  description: GitHub ActionsでOpenHSPの開発環境を構築するためのツール
+  heroicon: ArchiveBoxArrowDownIcon
+  links:
+    - title: 詳細
+      url: /posts/setup-openhsp
 - title: AviUtl Project Transfer
   description: AviUtlのプロジェクトファイルを他のPCに移動するためのツール
   img: /assets/images/works/apt.png
