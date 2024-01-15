@@ -61,8 +61,12 @@ Others:
     account: "bonychops"
     si: siWantedly
     url: https://www.wantedly.com/id/bony_chops
-  - title: dev.to
+  - title: LinkedIn
+    account: "bonychops"
+    si: siLinkedin
+    url: https://www.linkedin.com/in/bonychops/
     account: "@BonyChops"
+  - title: dev.to
     si: siDevdotto
     url: https://dev.to/bonychops
   - title: AtCoder
