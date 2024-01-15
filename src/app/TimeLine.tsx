@@ -92,7 +92,7 @@ export default function TimeLine() {
         >
           Wantedly
         </CustomLink>
-        ,
+        {", "}
         <CustomLink
           href="https://www.linkedin.com/in/bonychops/"
           className="text-blue-600"
