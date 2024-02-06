@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import ProgressHandler from "@/Components/ProgressHandler";
 import Header from "@/Components/Header";
 import { generateOGMetadata } from "@/lib/opengraph";
+import GoogleAnalytics from "@/Components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 const siteName = "Bony_Chops";
@@ -25,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={inter.className}>
         {children}
         <Header />
