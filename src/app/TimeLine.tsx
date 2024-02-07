@@ -19,7 +19,9 @@ import {
   siGithub,
   siGo,
   siGooglecloud,
+  siGooglecolab,
   siJavascript,
+  siJupyter,
   siLinux,
   siNodedotjs,
   siPhp,
@@ -343,6 +345,33 @@ export default function TimeLine() {
               </p>
             </TimeTreeEvent>
           )}
+          <TimeTreeEvent
+            className="opacity-0 transform animate-slideup-delay"
+            boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900"
+          >
+            <p className="text-sm opacity-60">2023.07 - 2023.10・20 y.o.</p>
+            <p className="text-lg flex font-bold">
+              <TrophyIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
+              知識情報演習I優秀作品賞
+            </p>
+            <div className="flex flex-wrap">
+              <Tag title="Python" iconData={siPython} className="mr-2 mb-2" />
+              <Tag title="Jupyter" iconData={siJupyter} className="mr-2 mb-2" />
+              <Tag
+                title="Google colab"
+                iconData={siGooglecolab}
+                className="mr-2 mb-2"
+              />
+            </div>
+            <p>
+              <CustomLink
+                href="https://klis.tsukuba.ac.jp/1158.html"
+                className="text-blue-600"
+              >
+                詳細
+              </CustomLink>
+            </p>
+          </TimeTreeEvent>
           <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023.07 - 2023.10・20 y.o.</p>
             <p className="text-lg flex font-bold">
@@ -358,7 +387,7 @@ export default function TimeLine() {
               />
               <Tag title="React" iconData={siReact} className="mr-2 mb-2" />
             </div>
-            <p>長期インターン</p>
+            <p>プラットフォーム開発部にて3ヶ月の長期インターン</p>
           </TimeTreeEvent>
           <TimeTreeEvent className="opacity-0 transform animate-slideup-delay">
             <p className="text-sm opacity-60">2023.08・21 y.o.</p>
@@ -369,7 +398,10 @@ export default function TimeLine() {
             <div className="flex flex-wrap">
               <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
             </div>
-            <p>Enablement Internship for Practical Development（インターン）</p>
+            <p>
+              二週間のインターン(Enablement Internship for Practical
+              Development)で、バックエンドの認証系機能を開発
+            </p>
           </TimeTreeEvent>
           <TimeTreeEvent
             className="opacity-0 transform animate-slideup-delay"
@@ -379,7 +411,7 @@ export default function TimeLine() {
             <p className="text-sm opacity-60">2023.10・21 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
-              MIXI株式会社
+              株式会社MIXI
             </p>
             <div className="flex flex-wrap">
               <Tag title="AWS" iconData={siAmazonaws} className="mr-2 mb-2" />
@@ -390,7 +422,12 @@ export default function TimeLine() {
               />
               <Tag title="Go" iconData={siGo} className="mr-2 mb-2" />
             </div>
-            <p>SREグループ 長期インターン</p>
+            <p>開発本部 CTO室 SREグループにて二ヶ月の長期インターン</p>
+            <p>
+              <CustomLink href="/posts/mixi-2023" className="text-blue-600">
+                詳細
+              </CustomLink>
+            </p>
           </TimeTreeEvent>
         </ReverseComponent>
       </div>
