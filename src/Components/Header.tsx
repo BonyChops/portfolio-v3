@@ -114,7 +114,7 @@ export default function Header() {
             className="mt-10"
           >
             <ArrowTopRightOnSquareIcon className="h-10 w-auto" />
-            Previous Version
+            v2
           </HeaderLink>
         </div>
       )}
