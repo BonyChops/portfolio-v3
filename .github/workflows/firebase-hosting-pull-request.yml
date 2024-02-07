@@ -17,6 +17,7 @@ jobs:
           NEXT_PUBLIC_GIT_COMMIT_SHA: ${{ github.sha }}
           NEXT_PUBLIC_GIT_COMMIT_DATE: ${{ github.event.pull_request.updated_at }}
           NEXT_PUBLIC_GITHUB_REPO_NAME: ${{ github.repository }}
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
