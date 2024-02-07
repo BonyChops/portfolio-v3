@@ -5,6 +5,7 @@ import ProgressHandler from "@/Components/ProgressHandler";
 import Header from "@/Components/Header";
 import { generateOGMetadata } from "@/lib/opengraph";
 import GoogleAnalytics from "@/Components/GoogleAnalytics";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const siteName = "Bony_Chops";
@@ -26,9 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
+      <Suspense fallback={<></>}>
         <GoogleAnalytics />
-      </head>
+      </Suspense>
       <body className={inter.className}>
         {children}
         <Header />
