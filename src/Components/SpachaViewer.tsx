@@ -19,7 +19,7 @@ export default async function SpachaViewer() {
         price={new Date().getSeconds() * 100}
         message={`今日は${new Date()}`}
         scale={0.8}
-        user={icon ? { name: "Bony_Chops", img: icon } : { name: "Bony_Chops" }}
+        user={icon ? { name: "BonyChops", img: icon } : { name: "BonyChops" }}
       />
       <input
         className="text-large mt-4 mr-2"

@@ -57,7 +57,7 @@ async function generateOgpImage(font: ArrayBuffer) {
         width={96}
         height={96}
       />
-      <p>Bony_Chops</p>
+      <p>BonyChops</p>
     </div>,
     {
       width: 1200,

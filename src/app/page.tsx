@@ -54,7 +54,7 @@ export default async function Home() {
           </div>
           <div className="z-50">
             <div className="text-5xl font-extrabold font-sans z-50">
-              Bony_Chops
+              BonyChops
             </div>
             <div className="text-2xl font-bold font-sans mt-2">
               Student Developer
