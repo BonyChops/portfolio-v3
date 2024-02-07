@@ -12,7 +12,7 @@ export default function HeaderLink(props: {
     <CustomLink
       href={href}
       className={
-        "transition text-4xl font-bold  border-b-2 border-transparent hover:border-gray-700 " +
+        "transition text-4xl font-bold  border-b-2 border-transparent hover:border-gray-700 flex gap-2 " +
         (className ?? "")
       }
       onClick={onClick}

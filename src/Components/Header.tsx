@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ArrowTopRightOnSquareIcon,
   Bars3Icon,
   MoonIcon,
   SunIcon,
@@ -100,9 +101,19 @@ export default function Header() {
             onClick={() => {
               setShowMenu(false);
             }}
+            href="https://blog.b7s.dev"
+          >
+            <ArrowTopRightOnSquareIcon className="h-10 w-auto" />
+            Blog
+          </HeaderLink>
+          <HeaderLink
+            onClick={() => {
+              setShowMenu(false);
+            }}
             href="https://v2.bonychops.com"
             className="mt-10"
           >
+            <ArrowTopRightOnSquareIcon className="h-10 w-auto" />
             Previous Version
           </HeaderLink>
         </div>
