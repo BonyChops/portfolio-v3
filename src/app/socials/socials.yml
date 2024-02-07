@@ -45,6 +45,10 @@ Others:
     account: "bony_chops"
     si: siZenn
     url: https://zenn.dev/bony_chops
+  - title: Bluesky
+    account: "@bonychops.bsky.social"
+    si: siBluesky
+    url: https://bsky.app/profile/bonychops.bsky.social
   - title: GitLab
     account: "@BonyChops"
     si: siGitlab
