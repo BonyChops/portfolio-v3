@@ -260,7 +260,7 @@ export default function TimeLine() {
                   width={24}
                   height={24}
                   className="mr-2"
-                  alt="Bony_Chops"
+                  alt="BonyChops"
                 />
                 現在のアイコンに
               </p>

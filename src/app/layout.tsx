@@ -8,14 +8,14 @@ import GoogleAnalytics from "@/Components/GoogleAnalytics";
 import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
-const siteName = "Bony_Chops";
+const siteName = "BonyChops";
 
 export const metadata = {
   title: {
     default: siteName,
     template: `%s - ${siteName}`,
   },
-  description: "Bony_Chopsのポートフォリオサイトです",
+  description: "BonyChopsのポートフォリオサイトです",
   metadataBase: new URL("https://bonychops.com"),
   ...generateOGMetadata(),
 };

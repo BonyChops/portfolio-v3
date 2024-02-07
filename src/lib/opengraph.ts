@@ -7,8 +7,8 @@ export function generateOGMetadata(title?: string) {
       images: [imageUrl],
     },
     openGraph: {
-      title: title ? `${title} - Bony_Chops` : "Bony_Chops",
-      siteName: "Bony_Chops",
+      title: title ? `${title} - BonyChops` : "BonyChops",
+      siteName: "BonyChops",
       images: {
         url: imageUrl,
         width: 1200,

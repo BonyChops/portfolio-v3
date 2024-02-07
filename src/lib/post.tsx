@@ -97,7 +97,7 @@ async function generateOgpImage(slug: string, font: ArrayBuffer) {
           width={64}
           height={64}
         />
-        Bony_Chops
+        BonyChops
       </p>
     </div>,
     {

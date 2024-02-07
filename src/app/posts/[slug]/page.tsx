@@ -60,7 +60,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: meta.title,
-      siteName: "Bony_Chops",
+      siteName: "BonyChops",
       images: {
         url: imageUrl,
         width: 1200,
