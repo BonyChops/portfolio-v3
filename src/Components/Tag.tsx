@@ -20,12 +20,9 @@ export default function Tag(props: {
     >
       {HeroIcon && <HeroIcon className="h-6 w-6 mr-2 flex-shrink-0" />}
       {iconData && (
-        <SimpleIconComponent
-          size={16}
-          iconData={iconData}
-          className="mr-2"
-          hex={hex}
-        />
+        <div className="mr-2 h-full flex items-center">
+          <SimpleIconComponent size={16} iconData={iconData} hex={hex} />
+        </div>
       )}
       {title}
     </a>

@@ -1,6 +1,7 @@
 import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 import {
   SimpleIcon,
+  siAmazonaws,
   siFastify,
   siFirebase,
   siGithub,
@@ -20,6 +21,7 @@ import {
   siReact,
   siSocketdotio,
   siTailwindcss,
+  siTerraform,
   siTypescript,
 } from "simple-icons";
 import { HeroIcon } from "@/lib/heroicon";
@@ -126,5 +128,13 @@ export const tags: Tags = {
   githubactions: {
     name: "GitHub Actions",
     icon: siGithubactions,
+  },
+  aws: {
+    name: "AWS",
+    icon: siAmazonaws,
+  },
+  terraform: {
+    name: "Terraform",
+    icon: siTerraform,
   },
 };
