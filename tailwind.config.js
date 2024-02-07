@@ -16,7 +16,7 @@ module.exports = {
       },
       keyframes: {
         slideup: {
-          "0%": { transform: "translateY(20%)", opacity: "0" },
+          "0%": { transform: "translateY(20%)", opacity: "0.01" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
