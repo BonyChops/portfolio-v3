@@ -349,7 +349,7 @@ export default function TimeLine() {
             className="opacity-0 transform animate-slideup-delay"
             boxClassName="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900"
           >
-            <p className="text-sm opacity-60">2023.07 - 2023.10・20 y.o.</p>
+            <p className="text-sm opacity-60">2023.07・20 y.o.</p>
             <p className="text-lg flex font-bold">
               <TrophyIcon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
               知識情報演習I優秀作品賞
