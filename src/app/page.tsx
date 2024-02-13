@@ -27,7 +27,6 @@ import TimeLine from "./TimeLine";
 import { whiteOgpImageIfNotExists, writeOgpImage } from "@/lib/default";
 import { loadGoogleFont } from "@/lib/font";
 import { CustomLink } from "@/Components/CustomLink";
-import { DateTime } from "luxon";
 import CommitDate from "@/Components/CommitDate";
 import {
   BuildingOffice2Icon,

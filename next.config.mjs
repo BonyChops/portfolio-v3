@@ -2,6 +2,11 @@ import nextMdx from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import shiki from "shiki";
+import NextBundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = NextBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const withMDX = nextMdx({
   extension: /\.mdx?$/,
@@ -37,4 +42,4 @@ const nextConfig = {
   output: "export",
 };
 
-export default withMDX(nextConfig);
+export default withBundleAnalyzer(withMDX(nextConfig));
