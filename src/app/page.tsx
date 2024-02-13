@@ -9,6 +9,8 @@ import {
   siGithub,
   siGo,
   siGooglecloud,
+  siK3s,
+  siKubernetes,
   siNextdotjs,
   siNodedotjs,
   siPython,
@@ -27,6 +29,12 @@ import { loadGoogleFont } from "@/lib/font";
 import { CustomLink } from "@/Components/CustomLink";
 import { DateTime } from "luxon";
 import CommitDate from "@/Components/CommitDate";
+import {
+  BuildingOffice2Icon,
+  UserIcon,
+  KeyIcon,
+  DocumentCheckIcon,
+} from "@heroicons/react/24/solid";
 
 export default async function Home() {
   await whiteOgpImageIfNotExists();
@@ -69,42 +77,55 @@ export default async function Home() {
             <table className="text-lg mb-8">
               <tbody>
                 {Object.entries({
-                  所属: "筑波大学 情報学群 知識情報・図書館学類",
-                  年齢: `${Math.floor(
-                    (new Date().getTime() - new Date(2002, 6, 30).getTime()) /
-                      1000 /
-                      60 /
-                      60 /
-                      24 /
-                      365.25
-                  )} 歳`,
-                  PGPキー: "457B F5D6 9ECE 0883",
-                  資格: ["基本情報技術者試験", "TOEIC L&R 860点"],
-                }).map((v, k) => (
-                  <tr key={k} className="align-top ">
-                    <th className="pr-12 text-right opacity-0 transform animate-slideup-delay">
-                      {v[0]}
-                    </th>
-                    <td>
-                      {Array.isArray(v[1]) ? (
-                        <ul className="list-none">
-                          {v[1].map((v, k) => (
-                            <li
-                              key={k}
-                              className="opacity-0 transform animate-slideup-delay"
-                            >
-                              {v}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <span className="opacity-0 transform animate-slideup-delay">
-                          {v[1]}
-                        </span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
+                  所属: {
+                    v: "筑波大学 情報学群 知識情報・図書館学類",
+                    icon: BuildingOffice2Icon,
+                  },
+                  年齢: {
+                    v: `${Math.floor(
+                      (new Date().getTime() - new Date(2002, 6, 30).getTime()) /
+                        1000 /
+                        60 /
+                        60 /
+                        24 /
+                        365.25
+                    )} 歳`,
+                    icon: UserIcon,
+                  },
+                  PGPキー: { v: "457B F5D6 9ECE 0883", icon: KeyIcon },
+                  資格: {
+                    v: ["基本情報技術者試験", "TOEIC L&R 860点"],
+                    icon: DocumentCheckIcon,
+                  },
+                }).map((v, k) => {
+                  const Icon = v[1].icon;
+                  return (
+                    <tr key={k} className="align-top ">
+                      <th className="pr-12 text-left opacity-0 transform animate-slideup-delay flex items-center">
+                        <Icon className="w-4 mr-2" />
+                        {v[0]}
+                      </th>
+                      <td>
+                        {Array.isArray(v[1].v) ? (
+                          <ul className="list-none">
+                            {v[1].v.map((v, k) => (
+                              <li
+                                key={k}
+                                className="opacity-0 transform animate-slideup-delay"
+                              >
+                                {v}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <span className="opacity-0 transform animate-slideup-delay">
+                            {v[1].v}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
             <h2 className="text-3xl font-bold my-2 opacity-0 transform animate-slideup-delay">
@@ -116,13 +137,14 @@ export default async function Home() {
             <div className="flex flex-wrap">
               {Object.entries({
                 NodeJS: siNodedotjs,
-                VSCode: siVisualstudiocode,
+                React: siReact,
+                TypeScript: siTypescript,
+                "Next.js": siNextdotjs,
+                Go: siGo,
                 Git: siGit,
                 GitHub: siGithub,
                 "Google Cloud": siGooglecloud,
                 Firebase: siFirebase,
-                React: siReact,
-                OAuth: null,
               }).map(([k, v], key) => (
                 <Tag
                   key={key}
@@ -140,9 +162,7 @@ export default async function Home() {
                 C: siC,
                 Python: siPython,
                 Ruby: siRuby,
-                TypeScript: siTypescript,
-                "Next.js": siNextdotjs,
-                Go: siGo,
+                OAuth: null,
                 Docker: siDocker,
                 AWS: siAmazonaws,
                 Terraform: siTerraform,
@@ -156,13 +176,13 @@ export default async function Home() {
               ))}
             </div>
             <h3 className="text-2xl font-bold my-2 opacity-0 transform animate-slideup-delay">
-              Learning
+              Learn Next
             </h3>
             <div className="flex flex-wrap">
               {Object.entries({
                 WebRTC: siWebrtc,
                 WebAssembly: siWebassembly,
-                Swift: siSwift,
+                Kubernetes: siKubernetes,
               }).map(([k, v], key) => (
                 <Tag
                   key={key}
