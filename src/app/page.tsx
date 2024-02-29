@@ -13,6 +13,7 @@ import {
   siKubernetes,
   siNextdotjs,
   siNodedotjs,
+  siPhp,
   siPython,
   siReact,
   siRuby,
@@ -160,6 +161,7 @@ export default async function Home() {
               {Object.entries({
                 C: siC,
                 Python: siPython,
+                PHP: siPhp,
                 Ruby: siRuby,
                 OAuth: null,
                 Docker: siDocker,
