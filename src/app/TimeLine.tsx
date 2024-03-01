@@ -408,7 +408,7 @@ export default function TimeLine() {
             noBottom={reverse}
             noAbove={!reverse}
           >
-            <p className="text-sm opacity-60">2023.10・21 y.o.</p>
+            <p className="text-sm opacity-60">2023.10 - 2023.12・21 y.o.</p>
             <p className="text-lg flex font-bold">
               <BuildingOffice2Icon className="h-6 w-6 mr-2 flex-shrink-0 my-auto" />
               株式会社MIXI
