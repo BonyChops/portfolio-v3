@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { Spacha, SpachaImage } from "react-spacha";
 
-export default async function SpachaViewer() {
+export default function SpachaViewer() {
   const [icon, setIcon] = React.useState<HTMLImageElement | null>(null);
   const [imageMode, setImageMode] = React.useState<boolean>(false);
   useEffect(() => {
