@@ -17,7 +17,8 @@ jobs:
       - run: echo '$ADSTXT' | envsubst > ./public/ads.txt
         env:
           ADSTXT: ${{ secrets.ADSTXT }}
-      - run: bun install && bun run build
+      - run: bun install
+      - run: bun run build
         env:
           NEXT_PUBLIC_GIT_COMMIT_SHA: ${{ github.sha }}
           NEXT_PUBLIC_GIT_COMMIT_DATE: ${{ github.event.head_commit.timestamp }}
