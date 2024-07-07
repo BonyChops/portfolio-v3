@@ -94,7 +94,7 @@ export default async function Home() {
                   },
                   PGPキー: { v: "457B F5D6 9ECE 0883", icon: KeyIcon },
                   資格: {
-                    v: ["基本情報技術者試験", "LPIC-1", "TOEIC L&R 860点"],
+                    v: ["基本情報技術者試験", "応用情報技術者試験", "LPIC-1", "TOEIC L&R 860点"],
                     icon: DocumentCheckIcon,
                   },
                 }).map((v, k) => {
