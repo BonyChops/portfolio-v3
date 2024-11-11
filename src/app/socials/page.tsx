@@ -1,5 +1,4 @@
-import fs from 'fs'
-import { CustomLink } from '@/Components/CustomLink'
+import fs from 'node:fs'
 import SocialButton from '@/Components/SocialButton'
 import { generateOGMetadata } from '@/lib/opengraph'
 import { parse } from 'yaml'
@@ -38,9 +37,9 @@ export default function Socials() {
           {category}
         </h3>,
         <div className='flex flex-wrap flex-grow' key={`socials_${category}`}>
-          {socials.map((social, k) => (
+          {socials.map(social => (
             <SocialButton
-              key={`social_button_${k}`}
+              key={`social_button_${social.title}`}
               title={social.title}
               account={social.account}
               privateAccount={social.private}
@@ -54,7 +53,7 @@ export default function Socials() {
           ))}
         </div>,
       ])}
-      <div className='flex flex-wrap'></div>
+      <div className='flex flex-wrap' />
     </div>
   )
 }

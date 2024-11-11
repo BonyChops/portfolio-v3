@@ -1,18 +1,10 @@
-import fs, { write } from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import fs from 'node:fs'
+import path from 'node:path'
 import dynamic from 'next/dynamic'
-// import { compile } from "xdm";
-import { parse } from 'yaml'
 
 import Tag from '@/Components/Tag'
 import { getPostData, writeOgpImage } from '@/lib/post'
 import { tags } from '@/utils/tags'
-import Image from 'next/image'
-
-// import Posts from "@/Components/Posts";
-
-import { loadGoogleFont } from '@/lib/font'
 import * as heroIcon from '@heroicons/react/24/solid'
 
 export async function generateStaticParams() {
@@ -103,9 +95,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       {meta.tags && meta.tags.length > 0 && (
         <div className='flex flex-wrap'>
           <div className='dummy text-yellow-500 dark:text-yellow-400' />
-          {meta.tags.map((tag, k) => (
+          {meta.tags.map(tag => (
             <Tag
-              key={`tag_${k}`}
+              key={`tag_${tags[tag]?.name}`}
               iconData={tags[tag]?.icon}
               HeroIcon={tags[tag]?.heroIcon}
               title={tags[tag]?.name}

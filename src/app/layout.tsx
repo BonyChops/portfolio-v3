@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ja'>
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<div />}>
         <GoogleAnalytics />
       </Suspense>
       <body className={inter.className}>

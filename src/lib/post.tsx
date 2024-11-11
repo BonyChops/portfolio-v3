@@ -1,8 +1,7 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import satori from 'satori'
 import sharp from 'sharp'
-import { HeroIcon } from './heroicon'
 
 interface Meta {
   title: string
@@ -32,7 +31,6 @@ export async function writeOgpImage(slug: string, font: ArrayBuffer) {
   const image = await generateOgpImage(slug, font)
   if (!image) {
     throw new Error('Failed to generate ogp image')
-    return
   }
 
   fs.writeFileSync(`${ogPath}/ogp.png`, image)

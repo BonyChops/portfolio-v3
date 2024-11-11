@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import { loadGoogleFont } from '../src/lib/font'
+import fs from 'node:fs'
+import path from 'node:path'
+import { loadGoogleFont } from '@/lib/font'
 
 async function fetchFonts() {
   const fontDirPath = path.join(process.cwd(), 'fonts')

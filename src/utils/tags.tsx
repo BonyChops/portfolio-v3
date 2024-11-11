@@ -2,7 +2,7 @@ import type { HeroIcon } from '@/lib/heroicon'
 import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 import {
   type SimpleIcon,
-  siAmazonaws,
+  siAmazonwebservices,
   siFastify,
   siFirebase,
   siGithub,
@@ -10,7 +10,6 @@ import {
   siGo,
   siGooglecloud,
   siJavascript,
-  siMaterialdesign,
   siMdx,
   siMicrobit,
   siNextdotjs,
@@ -131,7 +130,7 @@ export const tags: Tags = {
   },
   aws: {
     name: 'AWS',
-    icon: siAmazonaws,
+    icon: siAmazonwebservices,
   },
   terraform: {
     name: 'Terraform',

@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'node:fs'
 import { CustomLink } from '@/Components/CustomLink'
 import { generateOGMetadata } from '@/lib/opengraph'
 import * as heroIcons from '@heroicons/react/24/solid'
@@ -33,10 +33,10 @@ export default function Works() {
     <div className='min-h-screen md:py-24 py-8 md:px-24 px-8'>
       <h2 className='text-4xl font-bold mb-10 w-24 animate-slideup'>Works</h2>
       <div className='inline-flex flex-wrap justify-center mx-auto'>
-        {works.map((work, k) => (
+        {works.map(work => (
           <div
             className='rounded-xl w-72  bg-white dark:bg-gray-900 mr-2 mb-2 flex flex-col opacity-0 transform animate-slideup-delay'
-            key={k}
+            key={work.title}
           >
             <div
               className='w-full rounded-t-xl h-32  bg-cover bg-no-repeat'
@@ -63,10 +63,10 @@ export default function Works() {
                 <p>{work.description}</p>
               </div>
               <div className='flex flex-wrap'>
-                {work?.links?.map((link, k) => (
+                {work?.links?.map(link => (
                   <CustomLink
                     href={link.url}
-                    key={`customlink_${k}`}
+                    key={`customlink_${link.title}`}
                     className='text-blue-600 mr-2 mb-2'
                   >
                     {link.title}

@@ -3,11 +3,7 @@
 
 import Link from 'next/link'
 import NProgress from 'nprogress'
-import {
-  type MouseEventHandler,
-  type PropsWithChildren,
-  useEffect,
-} from 'react'
+import type { MouseEventHandler, PropsWithChildren } from 'react'
 
 export const CustomLink: React.FC<
   PropsWithChildren<{

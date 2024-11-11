@@ -1,8 +1,7 @@
 import CommitDate from '@/Components/CommitDate'
 import { CustomLink } from '@/Components/CustomLink'
 import Tag from '@/Components/Tag'
-import { whiteOgpImageIfNotExists, writeOgpImage } from '@/lib/default'
-import { loadGoogleFont } from '@/lib/font'
+import { whiteOgpImageIfNotExists } from '@/lib/default'
 import {
   BuildingOffice2Icon,
   DocumentCheckIcon,
@@ -11,7 +10,7 @@ import {
 } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import {
-  siAmazonaws,
+  siAmazonwebservices,
   siC,
   siDocker,
   siFirebase,
@@ -19,7 +18,6 @@ import {
   siGithub,
   siGo,
   siGooglecloud,
-  siK3s,
   siKubernetes,
   siNextdotjs,
   siNodedotjs,
@@ -27,10 +25,8 @@ import {
   siPython,
   siReact,
   siRuby,
-  siSwift,
   siTerraform,
   siTypescript,
-  siVisualstudiocode,
   siWebassembly,
   siWebrtc,
 } from 'simple-icons'
@@ -102,10 +98,10 @@ export default async function Home() {
                     ],
                     icon: DocumentCheckIcon,
                   },
-                }).map((v, k) => {
+                }).map(v => {
                   const Icon = v[1].icon
                   return (
-                    <tr key={k} className='align-top '>
+                    <tr key={v[0]} className='align-top '>
                       <th className='pr-12 text-left opacity-0 transform animate-slideup-delay flex items-center'>
                         <Icon className='w-4 mr-2' />
                         {v[0]}
@@ -113,9 +109,9 @@ export default async function Home() {
                       <td>
                         {Array.isArray(v[1].v) ? (
                           <ul className='list-none'>
-                            {v[1].v.map((v, k) => (
+                            {v[1].v.map(v => (
                               <li
-                                key={k}
+                                key={v[0]}
                                 className='opacity-0 transform animate-slideup-delay'
                               >
                                 {v}
@@ -150,9 +146,9 @@ export default async function Home() {
                 GitHub: siGithub,
                 'Google Cloud': siGooglecloud,
                 Firebase: siFirebase,
-              }).map(([k, v], key) => (
+              }).map(([k, v]) => (
                 <Tag
-                  key={key}
+                  key={k}
                   iconData={v}
                   title={k}
                   className='mr-2 mb-2 opacity-0 transform animate-slideup-delay'
@@ -170,11 +166,11 @@ export default async function Home() {
                 Ruby: siRuby,
                 OAuth: null,
                 Docker: siDocker,
-                AWS: siAmazonaws,
+                AWS: siAmazonwebservices,
                 Terraform: siTerraform,
-              }).map(([k, v], key) => (
+              }).map(([k, v]) => (
                 <Tag
-                  key={key}
+                  key={k}
                   iconData={v}
                   title={k}
                   className='mr-2 mb-2 opacity-0 transform animate-slideup-delay'
@@ -189,9 +185,9 @@ export default async function Home() {
                 WebRTC: siWebrtc,
                 WebAssembly: siWebassembly,
                 Kubernetes: siKubernetes,
-              }).map(([k, v], key) => (
+              }).map(([k, v]) => (
                 <Tag
-                  key={key}
+                  key={k}
                   iconData={v}
                   title={k}
                   className='mr-2 mb-2 opacity-0 transform animate-slideup-delay'

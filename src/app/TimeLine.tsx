@@ -16,7 +16,7 @@ import {
 import Image from 'next/image'
 import { useState } from 'react'
 import {
-  siAmazonaws,
+  siAmazonwebservices,
   siFastify,
   siFirebase,
   siGithub,
@@ -44,6 +44,7 @@ export default function TimeLine() {
     <div>
       <div className='flex flex-col items-center opacity-0 transform animate-slideup-delay'>
         <button
+          type={'button'}
           className='flex p-2'
           onClick={() => {
             setShowAll(!showAll)
@@ -60,7 +61,7 @@ export default function TimeLine() {
               className={`absolute left-0 top-0 h-8 w-8 rounded-full bg-white shadow-xl transition-transform ${
                 showAll && 'translate-x-full'
               }`}
-            ></div>
+            />
           </div>
           <p className='text-xl font-bold'>Show All</p>
         </button>
@@ -69,6 +70,7 @@ export default function TimeLine() {
           onClick={() => {
             setReverse(!reverse)
           }}
+          type={'button'}
         >
           <div
             className={`transition-colors relative rounded-full h-8 w-16 mr-2 shadow-xl dark:bg-opacity-70 ${
@@ -81,7 +83,7 @@ export default function TimeLine() {
               className={`absolute left-0 top-0 h-8 w-8 rounded-full bg-white shadow-xl transition-transform ${
                 reverse && 'translate-x-full'
               }`}
-            ></div>
+            />
           </div>
           <p className='text-xl font-bold'>Reverse</p>
         </button>
@@ -414,7 +416,11 @@ export default function TimeLine() {
               株式会社MIXI
             </p>
             <div className='flex flex-wrap'>
-              <Tag title='AWS' iconData={siAmazonaws} className='mr-2 mb-2' />
+              <Tag
+                title='AWS'
+                iconData={siAmazonwebservices}
+                className='mr-2 mb-2'
+              />
               <Tag
                 title='Terraform'
                 iconData={siTerraform}

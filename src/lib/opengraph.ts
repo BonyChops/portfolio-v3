@@ -1,4 +1,4 @@
-const imageUrl = `/assets/images/og/default/ogp.png`
+const imageUrl = '/assets/images/og/default/ogp.png'
 
 export function generateOGMetadata(title?: string) {
   return {

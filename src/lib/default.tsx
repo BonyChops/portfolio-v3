@@ -1,8 +1,7 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import satori from 'satori'
 import sharp from 'sharp'
-import { loadGoogleFont } from './font'
 
 export async function whiteOgpImageIfNotExists() {
   const ogPath = path.join(
@@ -27,7 +26,6 @@ export async function writeOgpImage(font: ArrayBuffer) {
   const image = await generateOgpImage(font)
   if (!image) {
     throw new Error('Failed to generate ogp image')
-    return
   }
 
   fs.writeFileSync(`${ogPath}/ogp.png`, image)

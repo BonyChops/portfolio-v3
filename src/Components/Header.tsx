@@ -3,8 +3,6 @@
 import {
   ArrowTopRightOnSquareIcon,
   Bars3Icon,
-  MoonIcon,
-  SunIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import Image from 'next/image'
@@ -14,7 +12,7 @@ import HeaderLink from './HeaderLink'
 export default function Header() {
   const [showMenu, setShowMenuOrigin] = useState(false)
   const [showMenuAnimate, setShowMenuAnimate] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [_isDarkMode, setIsDarkMode] = useState(false)
 
   const setShowMenu = (value: boolean) => {
     if (value) {
@@ -45,17 +43,17 @@ export default function Header() {
     }
   }, [])
 
-  const toggleDarkMode = () => {
-    if (isDarkMode) {
-      document.body.classList.remove('dark')
-      localStorage.theme = 'light'
-      setIsDarkMode(false)
-    } else {
-      document.body.classList.add('dark')
-      localStorage.theme = 'dark'
-      setIsDarkMode(true)
-    }
-  }
+  // const toggleDarkMode = () => {
+  //   if (isDarkMode) {
+  //     document.body.classList.remove('dark')
+  //     localStorage.theme = 'light'
+  //     setIsDarkMode(false)
+  //   } else {
+  //     document.body.classList.add('dark')
+  //     localStorage.theme = 'dark'
+  //     setIsDarkMode(true)
+  //   }
+  // }
 
   return (
     <>
@@ -132,6 +130,7 @@ export default function Header() {
           )}
         </button> */}
         <button
+          type={'button'}
           onClick={() => {
             setShowMenu(!showMenu)
           }}
