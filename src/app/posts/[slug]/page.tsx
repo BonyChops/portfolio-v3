@@ -30,9 +30,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const { slug } = params
+  const { slug } = await params
   const meta = await getPostData(slug)
   const imageUrl = `/assets/images/og/${slug}/ogp.png`
 
@@ -60,8 +60,10 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default async function Page({
+  params,
+}: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
 
   const meta = await getPostData(slug)
 
