@@ -1,39 +1,43 @@
 /* eslint-disable rulesdir/no-next-link */
-"use client";
+'use client'
 
-import Link from "next/link";
-import { MouseEventHandler, PropsWithChildren, useEffect } from "react";
-import NProgress from "nprogress";
+import Link from 'next/link'
+import NProgress from 'nprogress'
+import {
+  type MouseEventHandler,
+  type PropsWithChildren,
+  useEffect,
+} from 'react'
 
 export const CustomLink: React.FC<
   PropsWithChildren<{
-    href?: string;
-    className?: string;
-    onClick?: MouseEventHandler;
-    style?: React.CSSProperties;
+    href?: string
+    className?: string
+    onClick?: MouseEventHandler
+    style?: React.CSSProperties
   }>
 > = ({ href, children, onClick, className, style }) => {
-  const isExternal = href?.startsWith("http") ?? false;
+  const isExternal = href?.startsWith('http') ?? false
   return (
     <>
       <Link
-        href={href ?? "#"}
-        onClick={(e) => {
+        href={href ?? '#'}
+        onClick={e => {
           if (isExternal) {
-            return;
+            return
           }
-          NProgress.configure({ showSpinner: false });
-          NProgress.start();
+          NProgress.configure({ showSpinner: false })
+          NProgress.start()
           if (onClick) {
-            onClick(e);
+            onClick(e)
           }
         }}
         style={style}
-        className={className ?? ""}
-        target={isExternal ? "_blank" : ""}
+        className={className ?? ''}
+        target={isExternal ? '_blank' : ''}
       >
         {children}
       </Link>
     </>
-  );
-};
+  )
+}

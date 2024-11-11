@@ -1,36 +1,36 @@
-import satori from "satori";
-import sharp from "sharp";
-import { loadGoogleFont } from "./font";
-import fs from "fs";
-import path from "path";
+import fs from 'fs'
+import path from 'path'
+import satori from 'satori'
+import sharp from 'sharp'
+import { loadGoogleFont } from './font'
 
 export async function whiteOgpImageIfNotExists() {
   const ogPath = path.join(
     process.cwd(),
-    "public/assets/images/og",
-    "default",
-    "ogp.png"
-  );
+    'public/assets/images/og',
+    'default',
+    'ogp.png',
+  )
   if (!fs.existsSync(ogPath)) {
     const fontMedium = fs.readFileSync(
-      path.join(process.cwd(), "fonts/font.ttf")
-    );
+      path.join(process.cwd(), 'fonts/font.ttf'),
+    )
 
-    await writeOgpImage(fontMedium);
+    await writeOgpImage(fontMedium)
   }
 }
 
 export async function writeOgpImage(font: ArrayBuffer) {
-  const ogPath = path.join(process.cwd(), "public/assets/images/og", "default");
-  if (!fs.existsSync(ogPath)) fs.mkdirSync(ogPath, { recursive: true });
+  const ogPath = path.join(process.cwd(), 'public/assets/images/og', 'default')
+  if (!fs.existsSync(ogPath)) fs.mkdirSync(ogPath, { recursive: true })
 
-  const image = await generateOgpImage(font);
+  const image = await generateOgpImage(font)
   if (!image) {
-    throw new Error("Failed to generate ogp image");
-    return;
+    throw new Error('Failed to generate ogp image')
+    return
   }
 
-  fs.writeFileSync(`${ogPath}/ogp.png`, image);
+  fs.writeFileSync(`${ogPath}/ogp.png`, image)
 }
 
 async function generateOgpImage(font: ArrayBuffer) {
@@ -38,13 +38,13 @@ async function generateOgpImage(font: ArrayBuffer) {
     <div
       style={{
         fontSize: 72,
-        background: "white",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
+        background: 'white',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <img
@@ -52,8 +52,8 @@ async function generateOgpImage(font: ArrayBuffer) {
           borderRadius: 60,
           marginRight: 30,
         }}
-        src="https://github.com/BonyChops.png"
-        alt="BonyChops"
+        src='https://github.com/BonyChops.png'
+        alt='BonyChops'
         width={96}
         height={96}
       />
@@ -64,14 +64,14 @@ async function generateOgpImage(font: ArrayBuffer) {
       height: 630,
       fonts: [
         {
-          name: "NotoSansJP",
+          name: 'NotoSansJP',
           data: font,
-          style: "normal",
+          style: 'normal',
           weight: 700,
         },
       ],
-    }
-  );
+    },
+  )
 
-  return await sharp(Buffer.from(svg)).png().toBuffer();
+  return await sharp(Buffer.from(svg)).png().toBuffer()
 }

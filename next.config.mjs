@@ -1,12 +1,12 @@
-import nextMdx from "@next/mdx";
-import remarkGfm from "remark-gfm";
-import rehypePrettyCode from "rehype-pretty-code";
-import shiki from "shiki";
-import NextBundleAnalyzer from "@next/bundle-analyzer";
+import NextBundleAnalyzer from '@next/bundle-analyzer'
+import nextMdx from '@next/mdx'
+import rehypePrettyCode from 'rehype-pretty-code'
+import remarkGfm from 'remark-gfm'
+import shiki from 'shiki'
 
 const withBundleAnalyzer = NextBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const withMDX = nextMdx({
   extension: /\.mdx?$/,
@@ -20,7 +20,7 @@ const withMDX = nextMdx({
         rehypePrettyCode,
         /** @type {Partial<import("rehype-pretty-code").Options>} */
         ({
-          theme: "github-light",
+          theme: 'github-light',
           getHighlighter: shiki.getHighlighter,
         }),
       ],
@@ -28,18 +28,18 @@ const withMDX = nextMdx({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-});
+})
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   trailingSlash: true,
   images: {
     dangerouslyAllowSVG: true,
-    domains: ["cdn.simpleicons.org"],
+    domains: ['cdn.simpleicons.org'],
     unoptimized: true,
   },
-  output: "export",
-};
+  output: 'export',
+}
 
-export default withBundleAnalyzer(withMDX(nextConfig));
+export default withBundleAnalyzer(withMDX(nextConfig))
