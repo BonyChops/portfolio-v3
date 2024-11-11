@@ -39,7 +39,7 @@ export default function Socials() {
         <div className='flex flex-wrap flex-grow' key={`socials_${category}`}>
           {socials.map(social => (
             <SocialButton
-              key={`social_button_${social.title}`}
+              key={`social_button_${social.title}_${social.account}`}
               title={social.title}
               account={social.account}
               privateAccount={social.private}

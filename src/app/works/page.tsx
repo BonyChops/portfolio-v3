@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import { CustomLink } from '@/Components/CustomLink'
 import { generateOGMetadata } from '@/lib/opengraph'
 import * as heroIcons from '@heroicons/react/24/solid'
+import Image from 'next/image'
 import React from 'react'
 import { parse } from 'yaml'
 
@@ -38,16 +39,7 @@ export default function Works() {
             className='rounded-xl w-72  bg-white dark:bg-gray-900 mr-2 mb-2 flex flex-col opacity-0 transform animate-slideup-delay'
             key={work.title}
           >
-            <div
-              className='w-full rounded-t-xl h-32  bg-cover bg-no-repeat'
-              style={
-                work.img
-                  ? {
-                      backgroundImage: `url(${work.img})`,
-                    }
-                  : {}
-              }
-            >
+            <div className='w-full rounded-t-xl h-32 overflow-hidden relative'>
               {work.heroicon && (
                 <div className='h-full flex flex-col justify-between'>
                   {React.createElement(heroIcons[work.heroicon], {
@@ -55,6 +47,16 @@ export default function Works() {
                   })}
                 </div>
               )}
+              {work.img && (
+                <Image
+                  src={work.img}
+                  alt={''}
+                  className={'w-full h-full overflow-hidden'}
+                  objectFit={'cover'}
+                  fill
+                />
+              )}
+              <div className={'w-full h-full bg-red-400'} />
             </div>
 
             <div className='px-2 py-2 flex flex-col justify-between flex-grow'>
