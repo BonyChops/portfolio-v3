@@ -1,7 +1,8 @@
-import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
+import type { HeroIcon } from '@/lib/heroicon'
+import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 import {
-  SimpleIcon,
-  siAmazonaws,
+  type SimpleIcon,
+  siAmazonwebservices,
   siFastify,
   siFirebase,
   siGithub,
@@ -9,7 +10,6 @@ import {
   siGo,
   siGooglecloud,
   siJavascript,
-  siMaterialdesign,
   siMdx,
   siMicrobit,
   siNextdotjs,
@@ -23,118 +23,117 @@ import {
   siTailwindcss,
   siTerraform,
   siTypescript,
-} from "simple-icons";
-import { HeroIcon } from "@/lib/heroicon";
+} from 'simple-icons'
 
 type Tags = {
   [key: string]: {
-    name: string;
-    icon?: SimpleIcon;
-    heroIcon?: HeroIcon;
-    className?: string;
-  };
-};
+    name: string
+    icon?: SimpleIcon
+    heroIcon?: HeroIcon
+    className?: string
+  }
+}
 
 export const tags: Tags = {
   nextjs: {
-    name: "Next.js",
+    name: 'Next.js',
     icon: siNextdotjs,
   },
   react: {
-    name: "React",
+    name: 'React',
     icon: siReact,
   },
   firebase: {
-    name: "Firebase",
+    name: 'Firebase',
     icon: siFirebase,
   },
   mdx: {
-    name: "MDX",
+    name: 'MDX',
     icon: siMdx,
   },
   tailwindcss: {
-    name: "Tailwind CSS",
+    name: 'Tailwind CSS',
     icon: siTailwindcss,
   },
   typescript: {
-    name: "TypeScript",
+    name: 'TypeScript',
     icon: siTypescript,
   },
   googlecloud: {
-    name: "Google Cloud",
+    name: 'Google Cloud',
     icon: siGooglecloud,
   },
   ejs: {
-    name: "EJS",
+    name: 'EJS',
   },
   python: {
-    name: "Python",
+    name: 'Python',
     icon: siPython,
   },
   npm: {
-    name: "npm",
+    name: 'npm',
     icon: siNpm,
   },
   docusaurus: {
-    name: "Docusaurus",
+    name: 'Docusaurus',
   },
   javascript: {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: siJavascript,
   },
   microbit: {
-    name: "micro:bit",
+    name: 'micro:bit',
     icon: siMicrobit,
   },
   raspberrypi: {
-    name: "Raspberry Pi",
+    name: 'Raspberry Pi',
     icon: siRaspberrypi,
   },
   githubpages: {
-    name: "GitHub Pages",
+    name: 'GitHub Pages',
     icon: siGithub,
   },
   materializecss: {
-    name: "Materialize CSS",
+    name: 'Materialize CSS',
   },
   php: {
-    name: "PHP",
+    name: 'PHP',
     icon: siPhp,
   },
   nodejs: {
-    name: "Node.js",
+    name: 'Node.js',
     icon: siNodedotjs,
   },
   hsp: {
-    name: "HSP",
+    name: 'HSP',
   },
   deprecated: {
-    name: "Deprecated",
+    name: 'Deprecated',
     heroIcon: ExclamationCircleIcon,
-    className: "text-yellow-500 dark:text-yellow-400",
+    className: 'text-yellow-500 dark:text-yellow-400',
   },
   fastify: {
-    name: "Fastify",
+    name: 'Fastify',
     icon: siFastify,
   },
   websocket: {
-    name: "WebSocket",
+    name: 'WebSocket',
     icon: siSocketdotio,
   },
   golang: {
-    name: "Go",
+    name: 'Go',
     icon: siGo,
   },
   githubactions: {
-    name: "GitHub Actions",
+    name: 'GitHub Actions',
     icon: siGithubactions,
   },
   aws: {
-    name: "AWS",
-    icon: siAmazonaws,
+    name: 'AWS',
+    icon: siAmazonwebservices,
   },
   terraform: {
-    name: "Terraform",
+    name: 'Terraform',
     icon: siTerraform,
   },
-};
+}

@@ -1,113 +1,105 @@
-import fs, { write } from "fs";
-import path from "path";
-import matter from "gray-matter";
-// import { compile } from "xdm";
-import { parse } from "yaml";
-import dynamic from "next/dynamic";
+import fs from 'node:fs'
+import path from 'node:path'
+import dynamic from 'next/dynamic'
 
-import Image from "next/image";
-import Tag from "@/Components/Tag";
-import { tags } from "@/utils/tags";
-import { getPostData, writeOgpImage } from "@/lib/post";
-
-// import Posts from "@/Components/Posts";
-
-import * as heroIcon from "@heroicons/react/24/solid";
-import { loadGoogleFont } from "@/lib/font";
+import Tag from '@/Components/Tag'
+import { getPostData, writeOgpImage } from '@/lib/post'
+import { tags } from '@/utils/tags'
+import * as heroIcon from '@heroicons/react/24/solid'
 
 export async function generateStaticParams() {
   const posts = fs
-    .readdirSync(path.join(process.cwd(), "src/app/mdposts"))
-    .map((post) => ({
-      slug: post.replace(/\.mdx?$/, ""),
-    }));
+    .readdirSync(path.join(process.cwd(), 'src/app/mdposts'))
+    .map(post => ({
+      slug: post.replace(/\.mdx?$/, ''),
+    }))
 
-  const fontMedium = fs.readFileSync(
-    path.join(process.cwd(), "fonts/font.ttf")
-  );
+  const fontMedium = fs.readFileSync(path.join(process.cwd(), 'fonts/font.ttf'))
 
   await Promise.all(
-    posts.map(async (post) => {
-      await writeOgpImage(post.slug, fontMedium);
-    })
-  );
+    posts.map(async post => {
+      await writeOgpImage(post.slug, fontMedium)
+    }),
+  )
 
-  return posts.map((post) => ({
+  return posts.map(post => ({
     slug: post.slug,
-  }));
+  }))
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>
 }) {
-  const { slug } = params;
-  const meta = await getPostData(slug);
-  const imageUrl = `/assets/images/og/${slug}/ogp.png`;
+  const { slug } = await params
+  const meta = await getPostData(slug)
+  const imageUrl = `/assets/images/og/${slug}/ogp.png`
 
   if (!meta) {
     return {
-      title: "404",
-    };
+      title: '404',
+    }
   }
 
   return {
     title: meta.title,
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       images: [imageUrl],
     },
     openGraph: {
       title: meta.title,
-      siteName: "BonyChops",
+      siteName: 'BonyChops',
       images: {
         url: imageUrl,
         width: 1200,
         height: 600,
       },
     },
-  };
+  }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Page({
+  params,
+}: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
 
-  const meta = await getPostData(slug);
+  const meta = await getPostData(slug)
 
   if (!meta) {
     // response as 404
-    return <div>Post not found: {slug}</div>;
+    return <div>Post not found: {slug}</div>
   }
 
-  const DynamicComponent = dynamic(() => import(`../../mdposts/${slug}.mdx`));
+  const DynamicComponent = dynamic(() => import(`../../mdposts/${slug}.mdx`))
 
-  const Heroicon = heroIcon[meta.heroicon as keyof typeof heroIcon];
+  const Heroicon = heroIcon[meta.heroicon as keyof typeof heroIcon]
 
   return (
-    <div className="min-h-screen py-24 md:px-24 px-8">
+    <div className='min-h-screen py-24 md:px-24 px-8'>
       {meta.image && (
         <img
           src={meta.image}
-          alt=""
-          className=" h-36 mb-4 rounded-3xl object-cover"
+          alt=''
+          className=' h-36 mb-4 rounded-3xl object-cover'
         />
       )}
       {meta.symbol && !meta.image && (
-        <p className="font-bold text-6xl mb-12">{meta.symbol}</p>
+        <p className='font-bold text-6xl mb-12'>{meta.symbol}</p>
       )}
       {Heroicon && (
-        <p className="font-bold text-6xl mb-12">
-          {<Heroicon className="w-16 h-16" />}
+        <p className='font-bold text-6xl mb-12'>
+          {<Heroicon className='w-16 h-16' />}
         </p>
       )}
-      <h1 className="font-bold text-6xl mb-4">{meta.title}</h1>
+      <h1 className='font-bold text-6xl mb-4'>{meta.title}</h1>
       {meta.tags && meta.tags.length > 0 && (
-        <div className="flex flex-wrap">
-          <div className="dummy text-yellow-500 dark:text-yellow-400" />
-          {meta.tags.map((tag, k) => (
+        <div className='flex flex-wrap'>
+          <div className='dummy text-yellow-500 dark:text-yellow-400' />
+          {meta.tags.map(tag => (
             <Tag
-              key={`tag_${k}`}
+              key={`tag_${tags[tag]?.name}`}
               iconData={tags[tag]?.icon}
               HeroIcon={tags[tag]?.heroIcon}
               title={tags[tag]?.name}
@@ -116,8 +108,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
           ))}
         </div>
       )}
-      <div className="mb-8" />
+      <div className='mb-8' />
       <DynamicComponent />
     </div>
-  );
+  )
 }

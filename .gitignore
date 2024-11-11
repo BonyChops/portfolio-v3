@@ -39,3 +39,5 @@ next-env.d.ts
 
 public/assets/images/og/
 fonts/
+nextImageExportOptimizer/
+next-image-export-optimizer-hashes.json
