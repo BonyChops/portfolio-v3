@@ -5,7 +5,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
 import { useEffect, useState } from 'react'
 import HeaderLink from './HeaderLink'
 
@@ -63,7 +63,7 @@ export default function Header() {
             showMenuAnimate ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <Image
+          <ExportedImage
             className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert bg-white rounded-full mb-10'
             src='/logo_dark.svg'
             alt='Next.js Logo'

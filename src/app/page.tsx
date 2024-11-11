@@ -8,7 +8,7 @@ import {
   KeyIcon,
   UserIcon,
 } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
 import {
   siAmazonwebservices,
   siC,
@@ -44,7 +44,7 @@ export default async function Home() {
       <div className='flex flex-col items-center justify-between '>
         <div className='fixed xl:block md:flex place-items-center xl:pr-[500px] animate-slideup select-none'>
           <div className=''>
-            <Image
+            <ExportedImage
               className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert bg-white rounded-full mr-20'
               src='/logo_dark.svg'
               alt='Next.js Logo'

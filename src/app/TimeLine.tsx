@@ -13,7 +13,7 @@ import {
   MusicalNoteIcon,
   TrophyIcon,
 } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
 import { useState } from 'react'
 import {
   siAmazonwebservices,
@@ -259,7 +259,7 @@ export default function TimeLine() {
             <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
               <p className='text-sm opacity-60'>2021.04・18 y.o.</p>
               <p className='text-lg flex font-bold'>
-                <Image
+                <ExportedImage
                   src='/logo.svg'
                   width={24}
                   height={24}

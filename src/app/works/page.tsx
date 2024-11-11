@@ -6,7 +6,7 @@ import {
   CalculatorIcon,
   CommandLineIcon,
 } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
 import React from 'react'
 import { parse } from 'yaml'
 
@@ -58,11 +58,11 @@ export default function Works() {
                 </div>
               )}
               {work.img && (
-                <Image
+                <ExportedImage
                   src={work.img}
                   alt={''}
                   className={'w-full h-full overflow-hidden'}
-                  objectFit={'cover'}
+                  style={{ objectFit: 'cover' }}
                   fill
                 />
               )}

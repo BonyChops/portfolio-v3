@@ -1,5 +1,7 @@
+'use client'
+
 import { LockClosedIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import Image, { type ImageLoaderProps } from 'next/image'
 import {
   siBluesky,
   siDevdotto,
@@ -69,6 +71,8 @@ export default function SocialButton(props: {
   const siComponent = simpleIcons[si as keyof typeof simpleIcons]
   //   const siComponent = simpleIcons[si as keyof typeof simpleIcons];
   const Component = url ? CustomLink : 'div'
+  const directLoader = ({ src }: ImageLoaderProps) => src
+
   return (
     <Component
       style={{ backgroundColor: `#${hex ?? siComponent?.hex ?? 'FFFFFF'}` }}
@@ -86,6 +90,7 @@ export default function SocialButton(props: {
         )}
         {icon && (
           <Image
+            loader={directLoader}
             src={icon}
             width={48}
             height={48}

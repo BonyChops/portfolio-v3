@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import ExportedImage from 'next-image-export-optimizer'
+
 export default function SimpleIconComponent(props: {
   size: number
   className?: string
@@ -12,7 +13,7 @@ export default function SimpleIconComponent(props: {
 }) {
   const { size, slug, hex, className, alt, iconData } = props
   return (
-    <Image
+    <ExportedImage
       width={size}
       height={size}
       src={`https://cdn.simpleicons.org/${slug ?? iconData.slug}/${

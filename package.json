@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node scripts/fetchFonts.ts && next dev",
-    "build": "ts-node scripts/fetchFonts.ts && next build",
+    "dev": " next-image-export-optimizer && ts-node scripts/fetchFonts.ts && next dev",
+    "build": "ts-node scripts/fetchFonts.ts && next build && next-image-export-optimizer",
     "start": "ts-node scripts/fetchFonts.ts && next start",
     "lint": "next lint",
     "check": "bunx biome check --write",
@@ -24,6 +24,7 @@
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
     "next": "^15.0.3",
+    "next-image-export-optimizer": "^1.15.1",
     "nprogress": "^0.2.0",
     "postcss": "^8.4.48",
     "react": "^18.2.0",
