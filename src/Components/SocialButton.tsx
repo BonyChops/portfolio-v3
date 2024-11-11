@@ -1,7 +1,48 @@
 import { LockClosedIcon } from '@heroicons/react/24/solid'
-import * as simpleIcons from 'simple-icons'
+import Image from 'next/image'
+import {
+  siBluesky,
+  siDevdotto,
+  siDiscord,
+  siGithub,
+  siGitlab,
+  siGmail,
+  siKeybase,
+  siLeetcode,
+  siLine,
+  siLinkedin,
+  siMedium,
+  siMisskey,
+  siNpm,
+  siPaypal,
+  siQiita,
+  siWantedly,
+  siX,
+  siZenn,
+} from 'simple-icons'
 import { CustomLink } from './CustomLink'
 import SimpleIconComponent from './SimpleIconComponent'
+
+const simpleIcons = {
+  siX,
+  siGmail,
+  siDiscord,
+  siLine,
+  siKeybase,
+  siMisskey,
+  siGithub,
+  siQiita,
+  siZenn,
+  siBluesky,
+  siGitlab,
+  siMedium,
+  siNpm,
+  siWantedly,
+  siLinkedin,
+  siDevdotto,
+  siLeetcode,
+  siPaypal,
+}
 
 export default function SocialButton(props: {
   title: string
@@ -43,7 +84,15 @@ export default function SocialButton(props: {
             className='w-12 h-12 my-auto'
           />
         )}
-        {icon && <img src={icon} className='w-12 h-12 my-auto' alt={''} />}
+        {icon && (
+          <Image
+            src={icon}
+            width={48}
+            height={48}
+            className='my-auto'
+            alt={''}
+          />
+        )}
       </div>
       <div className='flex flex-col h-full  py-2 '>
         <p

@@ -1,10 +1,20 @@
 import fs from 'node:fs'
 import { CustomLink } from '@/Components/CustomLink'
 import { generateOGMetadata } from '@/lib/opengraph'
-import * as heroIcons from '@heroicons/react/24/solid'
+import {
+  ArchiveBoxArrowDownIcon,
+  CalculatorIcon,
+  CommandLineIcon,
+} from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import React from 'react'
 import { parse } from 'yaml'
+
+const heroIcons = {
+  CommandLineIcon,
+  CalculatorIcon,
+  ArchiveBoxArrowDownIcon,
+}
 
 interface Work {
   title: string
