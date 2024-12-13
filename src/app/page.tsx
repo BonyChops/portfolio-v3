@@ -61,7 +61,7 @@ export default async function Home() {
               BonyChops
             </div>
             <div className='text-2xl font-bold font-sans mt-2'>
-              Student Developer
+              Web Developer
             </div>
           </div>
         </div>
