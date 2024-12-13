@@ -73,21 +73,6 @@ export default async function Home() {
             <table className='text-lg mb-8'>
               <tbody>
                 {Object.entries({
-                  所属: {
-                    v: '筑波大学 情報学群 知識情報・図書館学類',
-                    icon: BuildingOffice2Icon,
-                  },
-                  年齢: {
-                    v: `${Math.floor(
-                      (new Date().getTime() - new Date(2002, 6, 30).getTime()) /
-                        1000 /
-                        60 /
-                        60 /
-                        24 /
-                        365.25,
-                    )} 歳`,
-                    icon: UserIcon,
-                  },
                   PGPキー: { v: '457B F5D6 9ECE 0883', icon: KeyIcon },
                   資格: {
                     v: [
