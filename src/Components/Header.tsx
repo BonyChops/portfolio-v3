@@ -1,18 +1,26 @@
 'use client'
 
 import {
+  ArrowPathIcon,
   ArrowTopRightOnSquareIcon,
   Bars3Icon,
+  ComputerDesktopIcon,
+  MoonIcon,
+  SunIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import ExportedImage from 'next-image-export-optimizer'
 import { useEffect, useState } from 'react'
 import HeaderLink from './HeaderLink'
 
+type Theme = 'light' | 'dark' | 'system'
+
 export default function Header() {
   const [showMenu, setShowMenuOrigin] = useState(false)
   const [showMenuAnimate, setShowMenuAnimate] = useState(false)
-  const [_isDarkMode, setIsDarkMode] = useState(false)
+  const [actualTheme, setActualTheme] =
+    useState<Exclude<Theme, 'system'>>('light')
+  const [theme, setTheme] = useState<Theme | null>(null)
 
   const setShowMenu = (value: boolean) => {
     if (value) {
@@ -30,30 +38,39 @@ export default function Header() {
     }
   }
 
-  useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.body.classList.add('dark')
-      setIsDarkMode(true)
+  const toggleDarkMode = () => {
+    if (theme === 'system') {
+      window.document.documentElement.dataset.theme = 'light'
+      localStorage.theme = 'light'
+      setTheme('light')
+    } else if (theme === 'light') {
+      window.document.documentElement.dataset.theme = 'dark'
+      localStorage.theme = 'dark'
+      setTheme('dark')
     } else {
-      document.body.classList.remove('dark')
+      window.document.documentElement.dataset.theme = actualTheme
+      localStorage.theme = ''
+      setTheme('system')
+    }
+  }
+
+  useEffect(() => {
+    if (window) {
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+      setActualTheme(theme)
+
+      const storedTheme = localStorage.getItem('theme')
+      if (storedTheme === 'dark' || storedTheme === 'light') {
+        setTheme(storedTheme)
+        window.document.documentElement.dataset.theme = storedTheme
+      } else {
+        setTheme('system')
+        window.document.documentElement.dataset.theme = theme
+      }
     }
   }, [])
-
-  // const toggleDarkMode = () => {
-  //   if (isDarkMode) {
-  //     document.body.classList.remove('dark')
-  //     localStorage.theme = 'light'
-  //     setIsDarkMode(false)
-  //   } else {
-  //     document.body.classList.add('dark')
-  //     localStorage.theme = 'dark'
-  //     setIsDarkMode(true)
-  //   }
-  // }
 
   return (
     <>
@@ -117,18 +134,24 @@ export default function Header() {
         </div>
       )}
       <div className='fixed md:top-16 top-8 right-0 md:mr-24 mr-8 flex'>
-        {/* <button
+        <button
+          type='button'
+          disabled={theme === null}
           onClick={() => {
-            toggleDarkMode();
+            toggleDarkMode()
           }}
-          className="relative rounded-xl w-12 h-12 bg-white shadow-md mr-4"
+          className='relative rounded-xl w-12 h-12 bg-white dark:bg-gray-900  shadow-md mr-4'
         >
-          {isDarkMode ? (
-            <MoonIcon className="w-6 h-6 mx-auto" />
+          {theme === null ? (
+            <ArrowPathIcon className='w-6 h-6 mx-auto animate-spin' />
+          ) : theme === 'dark' ? (
+            <MoonIcon className='w-6 h-6 mx-auto' />
+          ) : theme === 'light' ? (
+            <SunIcon className='w-6 h-6 mx-auto' />
           ) : (
-            <SunIcon className="w-6 h-6 mx-auto" />
+            <ComputerDesktopIcon className='w-6 h-6 mx-auto' />
           )}
-        </button> */}
+        </button>
         <button
           type={'button'}
           onClick={() => {

@@ -66,7 +66,7 @@ export default async function Home() {
           </div>
         </div>
         <div className='flex flex-col xl:ml-[500px]'>
-          <div className='relative mt-96 xl:mt-0 md:mt-64 py-20 md:px-10 px-5 w-full bg-slate-100 dark:bg-black md:rounded-xl backdrop-blur-sm md:max-w-2xl transition-opacity bg-opacity-90 dark:bg-opacity-70'>
+          <div className='relative mt-96 xl:mt-0 md:mt-64 py-20 md:px-10 px-5 w-full bg-slate-100 dark:bg-black md:rounded-xl backdrop-blur-xs md:max-w-2xl transition-opacity bg-opacity-90 dark:bg-opacity-70'>
             <h2 className='text-3xl font-bold opacity-0 transform animate-slideup-delay'>
               Profile
             </h2>
@@ -117,7 +117,7 @@ export default async function Home() {
             <h2 className='text-3xl font-bold my-2 opacity-0 transform animate-slideup-delay'>
               Skills
             </h2>
-            <h3 className='text-2xl font-bold my-2 bg-gradient-to-r bg-clip-text text-transparent from-yellow-400 to-yellow-950 opacity-0 transform animate-slideup-delay'>
+            <h3 className='text-2xl font-bold my-2 bg-linear-to-r bg-clip-text text-transparent from-yellow-400 to-yellow-950 opacity-0 transform animate-slideup-delay'>
               Main
             </h3>
             <div className='flex flex-wrap'>

@@ -135,7 +135,7 @@ export default function TimeLine() {
             <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
               <p className='text-sm opacity-60'>2013・11 y.o.</p>
               <p className='text-lg flex font-bold'>
-                <CommandLineIcon className='h-6 w-6 mr-2 flex-shrink-0' />
+                <CommandLineIcon className='h-6 w-6 mr-2 shrink-0' />
                 HSP を使い始める
               </p>
               <p className='text-sm'>
@@ -147,7 +147,7 @@ export default function TimeLine() {
             <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
               <p className='text-sm opacity-60'>2017・15 y.o.</p>
               <p className='text-lg flex font-bold'>
-                <MusicalNoteIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+                <MusicalNoteIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
                 文化祭劇のSE再生ソフトを開発
               </p>
               <div className='flex'>
@@ -158,7 +158,7 @@ export default function TimeLine() {
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2018.04・16 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <AcademicCapIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <AcademicCapIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               長野工業高等専門学校 入学
             </p>
             <p>{showAll ? '電子制御工学科' : '電子情報工学科'}</p>
@@ -168,7 +168,7 @@ export default function TimeLine() {
             <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
               <p className='text-sm opacity-60'>2019.04・17 y.o.</p>
               <p className='text-lg flex font-bold'>
-                <AcademicCapIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+                <AcademicCapIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
                 電子情報工学科 転科
               </p>
               <p>長野工業高等専門学校</p>
@@ -229,11 +229,11 @@ export default function TimeLine() {
           )}
           <TimeTreeEvent
             className='opacity-0 transform animate-slideup-delay'
-            boxClassName='bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
+            boxClassName='bg-linear-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
           >
             <p className='text-sm opacity-60'>2020 10.7 - 10.28・18 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <TrophyIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <TrophyIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               Web×IoT メイカーズチャレンジ 2020-21 in 信州 特別賞受賞
             </p>
             <div className='flex flex-wrap'>
@@ -273,18 +273,18 @@ export default function TimeLine() {
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2022.10 - 2023.07・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <BuildingOffice2Icon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <BuildingOffice2Icon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               株式会社ケイアイエスエス
             </p>
             <p>アルバイト</p>
           </TimeTreeEvent>
           <TimeTreeEvent
             className='opacity-0 transform animate-slideup-delay'
-            boxClassName='bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
+            boxClassName='bg-linear-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
           >
             <p className='text-sm opacity-60'>2022 11.28 - 12.17・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <TrophyIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <TrophyIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               Hack U KOSEN 2022 最優秀賞
             </p>
             <div className='flex flex-wrap'>
@@ -322,14 +322,14 @@ export default function TimeLine() {
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2023.03・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <AcademicCapIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <AcademicCapIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               長野工業高等専門学校 卒業
             </p>
           </TimeTreeEvent>
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2023.04・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <AcademicCapIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <AcademicCapIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               筑波大学 3年次編入学
             </p>
             <p>知識情報・図書館学類</p>
@@ -349,11 +349,11 @@ export default function TimeLine() {
           )}
           <TimeTreeEvent
             className='opacity-0 transform animate-slideup-delay'
-            boxClassName='bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
+            boxClassName='bg-linear-to-r from-yellow-100 to-yellow-200 dark:from-yellow-600 dark:to-yellow-900'
           >
             <p className='text-sm opacity-60'>2023.07・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <TrophyIcon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <TrophyIcon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               知識情報演習I優秀作品賞
             </p>
             <div className='flex flex-wrap'>
@@ -377,7 +377,7 @@ export default function TimeLine() {
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2023.07 - 2023.10・20 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <BuildingOffice2Icon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <BuildingOffice2Icon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               ピクシブ株式会社
             </p>
             <div className='flex flex-wrap'>
@@ -394,7 +394,7 @@ export default function TimeLine() {
           <TimeTreeEvent className='opacity-0 transform animate-slideup-delay'>
             <p className='text-sm opacity-60'>2023.08・21 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <BuildingOffice2Icon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <BuildingOffice2Icon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               株式会社ナレッジワーク
             </p>
             <div className='flex flex-wrap'>
@@ -412,7 +412,7 @@ export default function TimeLine() {
           >
             <p className='text-sm opacity-60'>2023.10 - 2023.12・21 y.o.</p>
             <p className='text-lg flex font-bold'>
-              <BuildingOffice2Icon className='h-6 w-6 mr-2 flex-shrink-0 my-auto' />
+              <BuildingOffice2Icon className='h-6 w-6 mr-2 shrink-0 my-auto' />
               株式会社MIXI
             </p>
             <div className='flex flex-wrap'>

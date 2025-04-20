@@ -69,7 +69,7 @@ export default function Works() {
               <div className={'w-full h-full bg-red-400'} />
             </div>
 
-            <div className='px-2 py-2 flex flex-col justify-between flex-grow'>
+            <div className='px-2 py-2 flex flex-col justify-between grow'>
               <div className='mb-4'>
                 <p className='text-2xl font-bold mb-2'>{work.title}</p>
                 <p>{work.description}</p>
