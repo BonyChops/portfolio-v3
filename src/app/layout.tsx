@@ -6,6 +6,7 @@ import { GA_MEASUREMENT_ID } from '@/lib/gtag'
 import { generateOGMetadata } from '@/lib/opengraph'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 const siteName = 'BonyChops'
@@ -37,7 +38,7 @@ export default function RootLayout({
         <script
           /* biome-ignore lint/security/noDangerouslySetInnerHtml: ダークテーマ切り替え用 */
           dangerouslySetInnerHTML={{
-            __html: `!function(){const e=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",o=localStorage.getItem("b7sdev-color-mode"),t="system"===o||null==o?e:"light"===o?"light":"dark";window.document.documentElement.dataset.colorMode=t}();`,
+            __html: `!function(){const e=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",o=localStorage.getItem("theme"),t="system"===o||null==o?e:"light"===o?"light":"dark";window.document.documentElement.dataset.theme=t}();`,
           }}
         />
       </head>

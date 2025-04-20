@@ -21,6 +21,8 @@ export default function SimpleIconComponent(props: {
       }`}
       alt={alt ?? `${slug} icon`}
       className={className}
+      unoptimized
+      placeholder={undefined}
     />
   )
 }
