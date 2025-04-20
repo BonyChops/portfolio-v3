@@ -36,7 +36,7 @@ export default function Socials() {
         >
           {category}
         </h3>,
-        <div className='flex flex-wrap flex-grow' key={`socials_${category}`}>
+        <div className='flex flex-wrap grow' key={`socials_${category}`}>
           {socials.map(social => (
             <SocialButton
               key={`social_button_${social.title}_${social.account}`}
