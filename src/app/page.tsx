@@ -78,6 +78,7 @@ export default async function Home() {
                     v: [
                       '基本情報技術者試験',
                       '応用情報技術者試験',
+                      '情報処理安全確保支援士試験',
                       'LPIC-1',
                       'TOEIC L&R 860点',
                     ],
